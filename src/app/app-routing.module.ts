@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   /** Define la ruta de los dos modulos usando carga perezosa */
   {
+    path: 'publico',
+    loadChildren: () => import( './publico/public.module' )
+      .then( module => module.AuthModule )
+  },
+  {
     path: 'auth',
     loadChildren: () => import( './auth/auth.module' )
       .then( module => module.AuthModule )
@@ -15,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'auth'
+    redirectTo: 'publico'
   }
 ];
 

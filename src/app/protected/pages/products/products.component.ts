@@ -1,75 +1,47 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-import { Category } from 'src/app/auth/interfaces/category.interface';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/services/auth.service';
 import { ProductsService } from 'src/app/services/products.service';
+import { Product } from '../../interfaces/product.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
-  // Atributos
-  categories: Array<Category> = [
-    {
-      _id: 'fruits',
-      name: 'Fruits',
-      description: 'Fruits',
-    },
-    {
-      _id: 'vegetables',
-      name: 'Vegetables',
-      description: 'Vegetables',
-    }
-  ];
-
-  // Procuramos usar los mismos nombres que espera nuestra API en las propiedades que agrupamos en nuestro FormBuilder Group
-  productForm: FormGroup = this.fb.group({
-    name: [
-      '',   // Valor por defecto
-      [
-        Validators.required
-      ]
-    ],
-    price: [
-      '',   // Valor por defecto
-      []
-    ],
-    quantity: [
-      '',   // Valor por defecto
-      [
-        Validators.required,
-        Validators.min( 1 )
-      ]
-    ],
-    category: [
-      '',  // Valor por defecto
-      []
-    ],
-    description: [
-      '',  // Valor por defecto
-      []
-    ]
-  });
+export class ProductsComponent implements OnInit {
+  userId!: string;
+  products!: Array<Product>;
 
   constructor(
-    private fb: FormBuilder,
-    private productService: ProductsService
-  ) {}
+    private authService: AuthService,
+    private productsService: ProductsService,
+    private router: Router
+  ) {
+    this.userId = this.authService.user._id;
+  }
 
-  createProduct() {
-    console.group( 'productForm' );
-    console.log( this.productForm.value );
-    console.log( this.productForm.valid );
-    console.groupEnd();
+  ngOnInit(): void {
+    this.productsService.getProductsByUser( this.userId )
+      .subscribe( value => {
+        console.log( value );
 
-    this.productService.createProduct( this.productForm.value )
-      .subscribe( ( response ) => {
-        console.log( response );
+        this.products = value;
       });
+  }
 
+  delete( id: string | undefined ) {
+    this.productsService.deleteProduct( id )
+      .subscribe( value => {
+        console.log( value );
 
+        this.products = this.products.filter( product => product._id != value._id );
+
+      });
+  }
+
+  update( id: string | undefined ) {
+    this.router.navigateByUrl( `/dashboard/products/update/${ id }` );
   }
 
 }

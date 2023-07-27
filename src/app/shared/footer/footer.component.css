@@ -1,0 +1,21 @@
+footer {
+    background: linear-gradient(to right, #2a8c4a, #64c27b, #9bfab0,#9bfab0,#64c27b,#2a8c4a);
+}
+
+footer h4, footer p, .bi, footer a {
+    color: #ffffff; /* Todo el texto y los íconos serán blancos */
+}
+
+footer a:hover {
+    color: #9bfab0; /* El color del texto cambiará a un verde claro al pasar el ratón por encima */
+}
+
+footer hr {
+    border-top-color: #9bfab0; /* Cambia el color de la línea horizontal a un verde claro */
+}
+
+
+
+.social-icons a:hover {
+    background-color: #9bfab0; /* Cambia el color de fondo al pasar el ratón por encima */
+}

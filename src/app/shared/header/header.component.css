@@ -1,0 +1,55 @@
+.navbar {
+    background: linear-gradient(to right,  #2a8c4a, #64c27b, #9bfab0,#9bfab0,#64c27b,#2a8c4a);
+}
+.navbar {
+    background-color: #2a8c4a; /* Color de fondo principal */
+}
+
+.navbar-brand, .nav-link, .dropdown-item {
+    color: #ffffff; /* Todo el texto será blanco */
+}
+
+.navbar-brand:hover, .nav-link:hover, .dropdown-item:hover {
+    color: #ffffff; /* El texto seguirá siendo blanco cuando se pasa el ratón por encima */
+}
+
+.nav-item.active .nav-link, .dropdown-item.active {
+    background-color: #64c27b; /* Color de fondo para elementos activos */
+    color: #ffffff; /* Texto blanco para elementos activos */
+}
+
+.btn-outline-success {
+    border-color: #ffffff; /* Borde del botón en blanco */
+    color: #ffffff; /* Texto del botón en blanco */
+}
+
+.btn-outline-success:hover {
+    background-color: #d0fdd7; /* Color de fondo del botón al pasar el ratón por encima */
+    color: #ffffff; /* Texto del botón seguirá siendo blanco al pasar el ratón por encima */
+}
+
+.dropdown-menu {
+    background-color: #9bfab0; /* Color de fondo para el menú desplegable */
+}
+
+.navbar-toggler {
+    border-color: #ffffff; /* Borde del botón de la hamburguesa en blanco */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Icono de la hamburguesa en blanco */
+}
+
+/* registro.component.css */
+.container {
+    max-width: 600px;
+  }
+  
+  h2 {
+    color: #2a8c4a;
+  }
+  
+  button {
+    width: 100px;
+  }
+  

@@ -1,48 +1,92 @@
-<form
-  class="form form-auth form-login"
-  [formGroup]="registerForm"
-  (ngSubmit)="register()"
-  autocomplete="off"
->
-  <h2>Registro</h2>
-  <div class="field">
-    <label for="nombre">Nombre</label>
-    <input
-      id="nombre"
-      class="input-field"
-      type="text"
-      formControlName="name"
-      placeholder="Ingrese su Nombre"
-    />
+<!-- registro.component.html -->
+<div class="container my-5">
+  <div *ngIf="step === 1">
+    <h2 class="mb-3">Paso 1 del Resgitro</h2>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6 m-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Informacion de Empresa</h5>
+              <form [formGroup]="registerForm"  (ngSubmit)="register()"   autocomplete="off">
+                <div class="mb-3">
+                  <label for="nameTienda" class="form-label">Nombre de la Tienda</label>
+                  <input type="text" class="form-control" id="nameTienda" placeholder="Ingresa el nombre de la tienda" formControlName="nameTienda">
+                </div>
+                <div class="mb-3">
+                  <label for="nit" class="form-label">NIT</label>
+                  <input type="text" class="form-control" id="nit" placeholder="Ingresa el Nit" formControlName="nit">
+                </div>
+                <div class="mb-3">
+                  <label for="local" class="form-label">Local</label>
+                  <input type="text" class="form-control" id="local" placeholder="Ingresa el nombre del local" formControlName="local">
+                </div>
+                <div class="mb-3">
+                  <label for="location" class="form-label">Ubicación</label>
+                  <input type="text" class="form-control" id="location" placeholder="Ingresa la dirección de la tienda" formControlName="location">
+                </div>
+                <div class="mb-3" >
+                  <label for="schedule" class="form-label">Horario de Atención</label>
+                  <div class="mb-3">
+                    <label for="schedule-start" class="form-label">Inicio</label>
+                    <input type="time" class="form-control" id="schedule-start" formControlName="scheduleStart">
+                    <label for="schedule-end" class="form-label">Cierre</label>
+                    <input type="time" class="form-control" id="schedule-end" formControlName="scheduleEnd">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="contact" class="form-label">Numero de Contacto</label>
+                  <input type="text" class="form-control" id="contact" placeholder="Ingresa la información de contacto" formControlName="contact">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary mt-3" (click)="nextStep()">Siguiente</button>
+    </div>
   </div>
-  <div class="field">
-    <label for="email">Email</label>
-    <input
-      id="email"
-      class="input-field"
-      type="email"
-      formControlName="email"
-      placeholder="Ingrese su Email"
-    />
+
+  <div *ngIf="step === 2">
+    <h2 class="mb-3">Paso 2 del Registro</h2>
+    
+
+        <div class="container mt-5">
+          <div class="row justify-content-center">
+            <div class="col-md-6 m-5">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Informacion Usuario</h5>
+                  <form [formGroup]="registerForm"  (ngSubmit)="register()"   autocomplete="off">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" formControlName="name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" formControlName="email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" formControlName="password">
+                    </div>
+                    <div class="mb-3">
+                      <label for="confirm-password" class="form-label">Confirmar contraseña</label>
+                      <input type="password" class="form-control" id="confirm-password" placeholder="Confirma tu contraseña" formControlName="confirmPassword">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-secondary mt-3" (click)="previousStep()">Anterior</button>
+      <button class="btn btn-primary mt-3" type="submit"  [disabled]="this.registerForm.invalid">Registrarse</button>
+    </div>
   </div>
-  <div class="field">
-    <label for="password">Password</label>
-    <input
-      id="password"
-      class="input-field"
-      type="password"
-      formControlName="password"
-      placeholder="Ingrese su Password"
-    />
-  </div>
-  <div class="field">
-    <button
-      type="submit"
-      [disabled]="this.registerForm.invalid"
-    >Registrarse</button>
-  </div>
-  <div class="field">
-    <p>¿Ya tienes cuenta?</p>
-    <p>Ingresa <a routerLink="/auth/login">aquí</a></p>
-  </div>
-</form>
+</div>
+

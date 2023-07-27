@@ -1,70 +1,48 @@
-<form
-  class="form form-product"
-  [formGroup]="productForm"
-  (ngSubmit)="createProduct()"
-  autocomplete="off"
->
-  <h2>Productos</h2>
-  <p>Registra nuevos productos. Diligencia cada uno de los campos según sean requeridos.</p>
-  <div class="field">
-    <label for="name">Nombre*</label>
-    <input
-      id="name"
-      class="input-field"
-      type="text"
-      formControlName="name"
-      placeholder="Nombre del Producto"
-    />
-  </div>
-  <div class="field">
-    <label for="price">Precio</label>
-    <input
-      id="price"
-      class="input-field"
-      type="number"
-      formControlName="price"
-      placeholder="Precio del Producto"
-    />
-  </div>
-  <div class="field">
-    <label for="quantity">Cantidad*</label>
-    <input
-      id="quantity"
-      class="input-field"
-      type="number"
-      formControlName="quantity"
-      placeholder="Cantidad disponible del Producto"
-    />
-  </div>
-  <div class="field">
-    <label for="category">Categoria</label>
-    <select
-      id="category"
-      class="input-field"
-      formControlName="category"
-    >
-      <option value="">Seleccione...</option>
-      <option
-        *ngFor="let category of categories"
-        value="{{ category._id }}"
-      >{{ category.name }}</option>
-    </select>
-  </div>
-  <div class="field">
-    <label for="description">Descripción</label>
-    <textarea
-      id="description"
-      class="input-field"
-      formControlName="description"
-      placeholder="Descripción del Producto"
-      cols="20"
-      rows="5"
-    ></textarea>
-  </div>
-  <div class="field">
-    <button
-      type="submit"
-      [disabled]="this.productForm.invalid"
-    >Crear Producto</button>
-  </div>
-</form>
+<h2>Lista de productos</h2>
+
+<ng-container *ngIf="products && products.length > 0; then productList; else noProducts">
+</ng-container>
+
+<ng-template #productList>
+  <h3>Productos registrados</h3>
+  <table class="table table-products">
+    <thead>
+      <th>Nombre</th>
+      <th>Categoria</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Ranking</th>
+      <th colspan="2">Acciones</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.ranking }}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="update( product._id )"
+          >
+            Edit
+          </button>
+        </td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="delete( product._id )"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</ng-template>
+
+<ng-template #noProducts>
+  <h3>No has registdado productos</h3>
+</ng-template>

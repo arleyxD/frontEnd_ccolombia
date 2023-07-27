@@ -13,6 +13,16 @@ import Swal from 'sweetalert2';
 })
 export class RegisterComponent {
 
+  step = 1;
+
+  nextStep() {
+    this.step++;
+  }
+
+  previousStep() {
+    this.step--;
+  }
+
   // Procuramos usar los mismos nombres que espera nuestra API en las propiedades que agrupamos en nuestro FormBuilder Group
   registerForm: FormGroup = this.fb.group({
     name: [
