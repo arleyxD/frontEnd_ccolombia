@@ -1,9 +1,9 @@
 footer {
-    background: linear-gradient(to right, #2a8c4a, #64c27b, #9bfab0,#9bfab0,#64c27b,#2a8c4a);
+    background: linear-gradient(to right,  #255000,#c6da52,#ffff8b,#c6da52,#255000);
 }
 
 footer h4, footer p, .bi, footer a {
-    color: #ffffff; /* Todo el texto y los íconos serán blancos */
+    color: #163000; /* Todo el texto y los íconos serán blancos */
 }
 
 footer a:hover {

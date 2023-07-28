@@ -1,5 +1,6 @@
 .navbar {
-    background: linear-gradient(to right,  #2a8c4a, #64c27b, #9bfab0,#9bfab0,#64c27b,#2a8c4a);
+   
+    background: linear-gradient(to right,  #255000,#c6da52,#ffff8b,#c6da52,#255000);
 }
 .navbar {
     background-color: #2a8c4a; /* Color de fondo principal */
@@ -24,12 +25,12 @@
 }
 
 .btn-outline-success:hover {
-    background-color: #d0fdd7; /* Color de fondo del botón al pasar el ratón por encima */
+    background-color: #8db600; /* Color de fondo del botón al pasar el ratón por encima */
     color: #ffffff; /* Texto del botón seguirá siendo blanco al pasar el ratón por encima */
 }
 
 .dropdown-menu {
-    background-color: #9bfab0; /* Color de fondo para el menú desplegable */
+    background-color: #8db600; /* Color de fondo para el menú desplegable */
 }
 
 .navbar-toggler {
