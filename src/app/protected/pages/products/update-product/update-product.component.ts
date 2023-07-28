@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/auth/interfaces/category.interface';
-import { ProductsService } from 'src/app/services/products.service';
+import { ProductsService } from 'src/app/protected/services/products.service';
 
 import { categories } from '../fake-categories';
 import { switchMap } from 'rxjs';

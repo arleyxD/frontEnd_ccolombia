@@ -38,12 +38,6 @@ export class LoginComponent {
   ) {}
 
   login() {
-    // console.group( 'loginForm' );
-    // console.log( this.loginForm.value );
-    // console.log( this.loginForm.valid );
-    // console.groupEnd();
-
-    // this.authService.validateToken().subscribe( console.log );   // Solo para probar
 
     const { email, password } = this.loginForm.value;
 

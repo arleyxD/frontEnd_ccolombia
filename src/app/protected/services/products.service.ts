@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { catchError, map, of, tap } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
-import { Product } from '../protected/interfaces/product.interface';
-import { Products } from '../auth/interfaces/products.interface';
-import { ProductResponse } from '../protected/interfaces/product-response.interface';
+import { Product } from '../interfaces/product.interface';
+import { Products } from '../../auth/interfaces/products.interface';
+import { ProductResponse } from '../interfaces/product-response.interface';
 
 @Injectable({
   providedIn: 'root'
