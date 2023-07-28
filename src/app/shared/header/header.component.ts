@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { AuthService } from 'src/app/auth/services/auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor (private authService: AuthService){}
+  get user() {
+    return this.authService.user;
+  }
 }
