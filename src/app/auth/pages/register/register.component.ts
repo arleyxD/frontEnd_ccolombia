@@ -30,7 +30,7 @@ export class RegisterComponent {
     location: ['', Validators.required],
     scheduleStart: ['', Validators.required],
     scheduleEnd: ['', Validators.required],
-    contact: ['', Validators.required]
+    contact: ['', Validators.required],
   });
 
   userData: FormGroup = this.fb.group({
@@ -65,9 +65,12 @@ export class RegisterComponent {
         this.authService.register(name, email, password).subscribe((value) => {
           /** Si el registro es valido. Es un valor booleano true */
           if (value === true) {
+            
             // Registro exitoso, redirige a la página de dashboard o a donde sea necesario
-            const nuevaTienda = this.empresaData.value;
-            console.log("nueva empresa", nuevaTienda);
+            const nuevaTienda = this.empresaData.value,
+            user = this.authService.user;
+            nuevaTienda.idUsuario = user._id;
+            console.log("nueva empresa", nuevaTienda );
             this.tiendaService.crearTienda(nuevaTienda).subscribe(
               (respuesta) => {
 

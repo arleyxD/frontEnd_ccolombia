@@ -16,10 +16,7 @@ export class DashboardComponent {
     private router: Router,
     private authService: AuthService,
     private tiendaService: TiendaService
-  ) {
-    const idEmpresa = localStorage.getItem( 'IdEmpresa' );    // Obtiene el Token del LocalStorage
-    this.idEmpresa = idEmpresa ? idEmpresa : '';                  // Verifica si existe el token en el LocalStorage
-  }
+  ) {}
 
   /** Getters */
   get user() {

@@ -6,5 +6,6 @@ export interface Tienda {
     scheduleStart: string;
     scheduleEnd: string;
     contact: string;
+    idUsuario:string;
   }
   
