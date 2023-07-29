@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './pages/main/main.component';
+import { ContactanosComponent } from './pages/contactanos/contactanos.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
 
 const routes: Routes = [
   {
@@ -9,7 +11,11 @@ const routes: Routes = [
     children: [
       {
         path: 'main',
-        component: MainComponent
+        component: PrincipalComponent
+      },
+      {
+        path: 'contactanos',
+        component: ContactanosComponent
       },
       {
         path: '**',

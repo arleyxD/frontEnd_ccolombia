@@ -4,13 +4,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthRoutingModule } from './public-routing.module';
 
 import { MainComponent } from './pages/main/main.component';
-import { TarjetasComponent } from './pages/tarjetas/tarjetas.component';
+import { TarjetasComponent } from './shared/tarjetas/tarjetas.component';
+import { BotonesComponent } from './shared/botones/botones.component';
+import { TarjetasFrutasComponent } from './shared/tarjetas-frutas/tarjetas-frutas.component';
+import { ContactanosComponent } from './pages/contactanos/contactanos.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    TarjetasComponent
+    TarjetasComponent,
+    BotonesComponent,
+    TarjetasFrutasComponent,
+    ContactanosComponent,
+    PrincipalComponent
   ],
   imports: [
     CommonModule,
