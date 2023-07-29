@@ -12,7 +12,7 @@ export class TiendaService {
   private apiUrl = `${environment.baseUrl}/tiendas`;
   token!: string;
   headers!: HttpHeaders;
-  stores = ['Tienda 1', 'Tienda 2', 'Tienda 3', 'Tienda 4']; // Ejemplo de tiendas
+  stores = ['Tienda 1', 'pTienda 2', 'cTienda 3', 'dTienda 4']; // Ejemplo de tiendas
 
 
   constructor(private http: HttpClient) {
