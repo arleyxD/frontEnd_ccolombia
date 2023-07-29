@@ -9,6 +9,7 @@ import { BotonesComponent } from './shared/botones/botones.component';
 import { TarjetasFrutasComponent } from './shared/tarjetas-frutas/tarjetas-frutas.component';
 import { ContactanosComponent } from './pages/contactanos/contactanos.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
+import { CarritoComponent } from './shared/carrito/carrito.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PrincipalComponent } from './pages/principal/principal.component';
     BotonesComponent,
     TarjetasFrutasComponent,
     ContactanosComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    CarritoComponent
   ],
   imports: [
     CommonModule,

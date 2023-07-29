@@ -1,0 +1,11 @@
+<button (click)="showAside = !showAside" class="btn cart-btn btn-dark rounded-circle position-fixed">
+    <i class="fas fa-shopping-cart"></i>
+  </button>
+  
+  <aside [ngClass]="{'show': showAside}" class="cart-aside bg-light text-dark p-3 position-fixed">
+    <h2>Contenido del Carrito</h2>
+    <button (click)="showAside = false" class="btn btn-dark">Cerrar</button>
+  </aside>
+  
+  <!-- Contenido principal de la página aquí -->
+  

@@ -1,0 +1,23 @@
+.cart-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 70px; /* Ajusta el ancho del botón */
+    height: 70px; /* Ajusta la altura del botón */
+    transition: background 0.5s ease;
+    display: flex; /* Asegura que el ícono del carrito se centre correctamente */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cart-aside {
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 300px;
+    transition: right 1s ease;
+  }
+  
+  .cart-aside.show {
+    right: 0;
+  }
+  
