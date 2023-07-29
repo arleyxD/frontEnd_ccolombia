@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable ,of} from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Tienda } from '../interfaces/tienda.interface';
 import { tiendaResponse } from '../interfaces/tiendaResponse.interface';
@@ -12,11 +12,19 @@ export class TiendaService {
   private apiUrl = `${environment.baseUrl}/tiendas`;
   token!: string;
   headers!: HttpHeaders;
+  stores = ['Tienda 1', 'Tienda 2', 'Tienda 3', 'Tienda 4']; // Ejemplo de tiendas
+
 
   constructor(private http: HttpClient) {
     const token = localStorage.getItem( 'token' );    // Obtiene el Token del LocalStorage
     this.token = token ? token : '';                  // Verifica si existe el token en el LocalStorage
     this.headers = new HttpHeaders().set( 'X-Token', `${ this.token }` );
+  }
+
+  getStores(): Observable<string[]> {
+    // Aquí deberías hacer una llamada a tu API para obtener las tiendas
+    // pero para el ejemplo, solo devolveremos la lista de tiendas que ya tenemos
+    return of(this.stores);
   }
 
   // Función para obtener todas las tiendas
