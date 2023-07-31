@@ -10,6 +10,7 @@ import { AsideComponent } from './shared/aside/aside.component';
 import { SearchComponent } from './shared/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     AsideComponent,
     SearchComponent
+    
   ],
   imports: [
     BrowserModule,
