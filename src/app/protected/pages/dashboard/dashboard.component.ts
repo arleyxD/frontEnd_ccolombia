@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { TiendaService } from 'src/app/auth/services/tienda.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,9 +10,12 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 })
 export class DashboardComponent {
 
+  idEmpresa!: string;
+
   constructor(
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private tiendaService: TiendaService
   ) {}
 
   /** Getters */

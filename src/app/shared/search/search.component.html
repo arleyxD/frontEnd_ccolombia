@@ -1,0 +1,10 @@
+<form class="d-flex search-form" role="search">
+  <div class="search-container">
+    <input class="form-control search-input" type="search" [formControl]="myControl" placeholder="Buscar tienda" aria-label="Buscar tienda">
+    <div *ngIf="myControl.value && filteredOptions.length" class="search-results">
+      <div *ngFor="let option of filteredOptions" class="search-result" (click)="onOptionClick(option)">
+        {{option}}
+      </div>
+    </div>
+  </div>
+</form>

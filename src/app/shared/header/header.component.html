@@ -1,86 +1,51 @@
-<pre>{{ user | json }}</pre>
-
-<ng-container *ngIf="!user;  then iAmDone; else iAmNotDone">
-</ng-container>
-
-<ng-template #iAmDone>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="">CColombia</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="">producto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="">new producto</a>
-            </li>
-        </ul>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        <ul class="navbar-nav  mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/auth/login">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/auth/register/">Register</a>
-              </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  {{user.name}}
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" routerLink="">Profile</a></li>
-                  <li><a class="dropdown-item" routerLink="">Sell and parchases</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" routerLink="">Logout</a></li>
-                </ul>
-              </li>
-              
-        </ul>
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">CColombia</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" routerLink="">Inicio</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLogged">
+              <a class="nav-link" routerLink="publico/contactanos">Contactanos</a>
+          </li>
+          <li class="nav-item" *ngIf="isLogged">
+            <a class="nav-link" routerLink="">Pedidos</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" routerLink="dashboard/products">Productos</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" routerLink="dashboard/products/new">Nuevos Productos</a>
+        </li>
+      </ul>
+      <div *ngIf="!isLogged">
+      <app-search></app-search>
       </div>
+      <ul class="navbar-nav  mb-2 mb-lg-0">
+          <!-- Cuando no esté logueado, muestra las opciones de login y registro -->
+          <li class="nav-item" *ngIf="!isLogged">
+              <a class="nav-link" routerLink="/auth/login">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLogged">
+              <a class="nav-link" routerLink="/auth/register/">Register</a>
+          </li>
+          <!-- Cuando esté logueado, muestra las opciones del perfil del usuario -->
+          <li class="nav-item dropdown" *ngIf="isLogged">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{user.name}}
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="dashboard">Profile</a></li>
+                <li><a class="dropdown-item" routerLink="">Sell and parchases</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+              </ul>
+          </li>
+      </ul>
     </div>
-  </nav>
-</ng-template>
-
-<ng-template #iAmNotDone>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="">CColombia</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="">Contactanos</a>
-            </li>
-        </ul>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        <ul class="navbar-nav  mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/auth/login">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/auth/register/">Register</a>
-              </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</ng-template>
-
-
-
-
+  </div>
+</nav>
