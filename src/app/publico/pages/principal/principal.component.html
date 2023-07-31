@@ -31,10 +31,7 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-              
-
               <app-tarjetas></app-tarjetas>
-
               <div class="container mt-4">
                 <app-botones (filtroSeleccionado)="filtroActual = $event"></app-botones>
                 <app-tarjetas-frutas [filtroActual]="filtroActual"></app-tarjetas-frutas>
