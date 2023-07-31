@@ -10,6 +10,8 @@ import { TarjetasFrutasComponent } from './shared/tarjetas-frutas/tarjetas-fruta
 import { ContactanosComponent } from './pages/contactanos/contactanos.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { CarritoComponent } from './shared/carrito/carrito.component';
+import { FilProductComponent } from './pages/fil-product/fil-product.component';
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { CarritoComponent } from './shared/carrito/carrito.component';
     TarjetasFrutasComponent,
     ContactanosComponent,
     PrincipalComponent,
-    CarritoComponent
+    CarritoComponent,
+    FilProductComponent
   ],
   imports: [
     CommonModule,
