@@ -65,25 +65,7 @@ export class RegisterComponent {
         this.authService.register(name, email, password).subscribe((value) => {
           /** Si el registro es valido. Es un valor booleano true */
           if (value === true) {
-            
-            // Registro exitoso, redirige a la página de dashboard o a donde sea necesario
-            const nuevaTienda = this.empresaData.value,
-            user = this.authService.user;
-            nuevaTienda.idUsuario = user._id;
-            console.log("nueva empresa", nuevaTienda );
-            this.tiendaService.crearTienda(nuevaTienda).subscribe(
-              (respuesta) => {
-
-                console.log('Tienda creada:', respuesta.produt?._id);
-                const IdEmpresa = respuesta.produt?._id;
-                localStorage.setItem( 'IdEmpresa', IdEmpresa ? IdEmpresa:'');
-                this.router.navigateByUrl('/dashboard');
-              },
-              (error) => {
-                console.error('Error al crear la tienda:', error);
-                // Implementa aquí la lógica para el rollback en caso de error en la creación de tienda 
-              }
-            );
+            this.creacionTienda();
           } else {
             console.log(value);
             const { msg } = value as { ok: boolean, msg: string };
@@ -97,4 +79,30 @@ export class RegisterComponent {
       }
     }
   } 
+
+
+
+
+  creacionTienda(){
+  // Registro exitoso, redirige a la página de dashboard o a donde sea necesario
+  const nuevaTienda = this.empresaData.value,
+  user = this.authService.user;
+  console.log("Este el id",user);
+  nuevaTienda.idUsuario = user._id;
+
+  console.log("nueva empresa", nuevaTienda );
+  this.tiendaService.crearTienda(nuevaTienda).subscribe(
+    (respuesta) => {      
+      console.log('Tienda creada:', respuesta.produt?._id);
+      const IdEmpresa = respuesta.produt?._id;
+      localStorage.setItem( 'IdEmpresa', IdEmpresa ? IdEmpresa:'');
+      this.router.navigateByUrl('/dashboard');
+    },
+    (error) => {
+      console.error('Error al crear la tienda:', error);
+      // Implementa aquí la lógica para el rollback en caso de error en la creación de tienda 
+    }
+  );
+  }
+
 }

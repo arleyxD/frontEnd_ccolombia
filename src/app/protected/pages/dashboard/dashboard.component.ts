@@ -10,6 +10,19 @@ import { TiendaService } from 'src/app/auth/services/tienda.service';
 })
 export class DashboardComponent {
 
+  showUser = true;
+  showTienda = false;
+
+  tienda = {
+    nameTienda: '',
+    nit: '',
+    local: '',
+    location: '',
+    scheduleStart: '',
+    scheduleEnd: '',
+    contact: ''
+  };
+
   idEmpresa!: string;
 
   constructor(
