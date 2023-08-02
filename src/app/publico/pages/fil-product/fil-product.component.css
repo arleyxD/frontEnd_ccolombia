@@ -1,0 +1,11 @@
+.d-flex.justify-content-between.g-2 {
+    width: 50%;
+}
+.card-body {
+    flex: 1 0 400px;
+}
+.card-image, .card-price {
+    flex: 1 0 200px;
+}
+
+  
