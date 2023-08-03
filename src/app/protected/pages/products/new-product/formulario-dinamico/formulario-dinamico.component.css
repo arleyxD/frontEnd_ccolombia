@@ -1,0 +1,19 @@
+/* formulario-dinamico.component.css */
+/* Estilo para el borde sólido del formulario */
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  /* Estilo para centrar el botón "Agregar" */
+  .btn-agregar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el botón "Borrar" */
+  .btn-borrar {
+    float: left;
+  }
+  

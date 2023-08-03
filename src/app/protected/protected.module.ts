@@ -8,6 +8,8 @@ import { MainComponent } from './pages/main/main.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { NewProductComponent } from './pages/products/new-product/new-product.component';
 import { UpdateProductComponent } from './pages/products/update-product/update-product.component';
+import { FormularioDinamicoComponent } from './pages/products/new-product/formulario-dinamico/formulario-dinamico.component';
+import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule
 
 
 @NgModule({
@@ -16,12 +18,15 @@ import { UpdateProductComponent } from './pages/products/update-product/update-p
     MainComponent,
     ProductsComponent,
     NewProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    FormularioDinamicoComponent
   ],
   imports: [
     CommonModule,
     ProtectedRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
+    
   ]
 })
 export class ProtectedModule { }
