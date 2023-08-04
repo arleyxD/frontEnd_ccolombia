@@ -1,15 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FrutaService } from 'src/app/protected/services/fruta.service';
+import { FormBuilder } from '@angular/forms';
+import { Observable ,of} from 'rxjs';
+import { Fruta } from 'src/app/protected/interfaces/frutas.interface';
 
 @Component({
   selector: 'app-formulario-dinamico',
   templateUrl: './formulario-dinamico.component.html',
   styleUrls: ['./formulario-dinamico.component.css']
 })
-export class FormularioDinamicoComponent {
+export class FormularioDinamicoComponent implements OnInit{
   forms: any[] = [];
+  frutas: Fruta[] = [];
+  selectedProduct: any = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private frutaService: FrutaService, private fb: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.frutaService.getFrutas().subscribe(
+      (frutas) => console.log(frutas),
+      (error) => console.error(error)
+    );
+  }
 
   // Método para agregar un nuevo formulario
   addForm() {
