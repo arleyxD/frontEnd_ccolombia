@@ -1,192 +1,2227 @@
-<div class="container md-6 mt-5 p-3" style="max-width: 800px;" >
-    <div class="d-flex justify-content-between mt-4 mb-4 g-2">
-        <div class="card-image">
-            <img src="../../../../assets/contenidos/alverja.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="card-body">
-            <h3 class="card-title">Alverja</h3>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-price">
-            <div class="cardtotal">
-                 <span class="cardtotal">Precio: {{99.99|currency}}</span>
+<div class="container md-6 mt-5 p-3 d-flex" style="max-width: 800px;" >
+    <div class="">
+        <h2 class="fixed-top d-flex justify-content-center mb-3">FARMER TAVO SAS</h2>
+    </div>
+    <div class="p-3">
+        <app-fil-product-boton></app-fil-product-boton>
+    </div>
+    <div class=" cards">
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/alverja.jpg" class="img-fluid rounded-start" alt="...">
             </div>
-            <div class="categoriaProduct">
-                <div>
-                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                    <label class="btn btn-secondary" for="option1">Unidad</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                    <label class="btn btn-secondary" for="option2">250g</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                    <label class="btn btn-secondary" for="option3">Libra</label>
+            <div class="card-body">
+                <h3 class="card-title">Alverja</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
                 </div>
-                <h5>Categoria</h5>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">3</label>
-                  </div>
             </div>
-            <a href="#" class="btn btn-primary"> Agregar al carro </a>
-            <div class="card-quantity">
-                <button>+</button>
-                <span class="cardquantity">1</span>
-                <button>-</button>
+            <div class="card-price">
+                <div class="cardtotal">
+                     <span class="cardtotal">Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/manzana.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Manzana Royal</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/brocoli.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Brocoli</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/ceboya.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Cebolla Cabezona</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/kiwi.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">kiwi</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/freza.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Fresa</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/lechuga.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Lechuga Crespa</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/masorca.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Mazorca</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/naranja.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Naranja Valencia</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/papa.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Papa Pastusa</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/tomate.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Tomamte Chonto</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                     <span class="cardtotal">Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/uvas_chilenas.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Uva Chilena</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/papa-criolla.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Papa Criolla</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Guanabana.jpeg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Guanabana</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/PERA-CHILENA.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Pera Chilena</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/cebolla-larga.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Cebolla larga</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/pepino_guiso.webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Pepino de Guiso</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/pepino-cohombro.jpeg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Pepino Cohombro</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/coco.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Coco</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Papaya.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Papaya Maradol</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/banano-criollo.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Banano Criollo</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/HABICHUELA.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Habichuela</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                     <span class="cardtotal">Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/apples-1872997_1280.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Manzana Roja</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/brocoli.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Brocoli</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/alverja.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Alverja</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                     <span class="cardtotal">Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/apples-1872997_1280.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Manzana Roja</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/brocoli.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Brocoli</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 mb-4 g-2">
+            <div class="card-image">
+                <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Arandanos</h3>
+                <p class="card-text">La mejor eleccion para su negocio.</p>
+                <div class="container mt-4">
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Producto Agotado</strong> Este producto ya no está disponible en inventario.
+                    </div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="cardtotal">
+                    <span class="cardtotal"> Precio: {{99.99|currency}}</span>
+                </div>
+                <div class="categoriaProduct">
+                    <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="option1">500g</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn btn-secondary" for="option2">Kilo</label>
+    
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn btn-secondary" for="option3">Canastilla</label>
+                    </div>
+                    <h5>Categoria</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                      </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-custom"> Agregar al carro </a>
+                <div class="card-quantity">
+                    <button class="btn-custom">+</button>
+                    <span class="cardquantity">1</span>
+                    <button class="btn-custom">-</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container md-6 mt-5 p-3" style="max-width: 800px;" >
-    <div class="d-flex justify-content-between mt-4 mb-4 g-2">
-        <div class="card-image">
-            <img src="../../../../assets/contenidos/apples-1872997_1280.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="card-body">
-            <h3 class="card-title">Manzana Roja</h3>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-price">
-            <div class="cardtotal">
-                <span class="cardtotal"> Precio: {{99.99|currency}}</span>
-            </div>
-            <div class="categoriaProduct">
-                <div>
-                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                    <label class="btn btn-secondary" for="option1">Unidad</label>
 
-                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                    <label class="btn btn-secondary" for="option2">250g</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                    <label class="btn btn-secondary" for="option3">Libra</label>
-                </div>
-                <h5>Categoria</h5>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">3</label>
-                  </div>
-            </div>
-            <a href="#" class="btn btn-primary"> Agregar al carro </a>
-            <div class="card-quantity">
-                <button>+</button>
-                <span class="cardquantity">1</span>
-                <button>-</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container md-6 mt-5 p-3" style="max-width: 800px;" >
-    <div class="d-flex justify-content-between mt-4 mb-4 g-2">
-        <div class="card-image">
-            <img src="../../../../assets/contenidos/Arandanos.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="card-body">
-            <h3 class="card-title">Arandanos</h3>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-price">
-            <div class="cardtotal">
-                <span class="cardtotal"> Precio: {{99.99|currency}}</span>
-            </div>
-            <div class="categoriaProduct">
-                <div>
-                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                    <label class="btn btn-secondary" for="option1">Unidad</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                    <label class="btn btn-secondary" for="option2">250g</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                    <label class="btn btn-secondary" for="option3">Libra</label>
-                </div>
-                <h5>Categoria</h5>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">3</label>
-                  </div>
-            </div>
-            <a href="#" class="btn btn-primary"> Agregar al carro </a>
-            <div class="card-quantity">
-                <button>+</button>
-                <span class="cardquantity">1</span>
-                <button>-</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container md-6 mt-5 p-3" style="max-width: 800px;" >
-    <div class="d-flex justify-content-between mt-4 mb-4 g-2">
-        <div class="card-image">
-            <img src="../../../../assets/contenidos/brocoli.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="card-body">
-            <h3 class="card-title">Brocoli</h3>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-price">
-            <div class="cardtotal">
-                <span class="cardtotal"> Precio: {{99.99|currency}}</span>
-            </div>
-            <div class="categoriaProduct">
-                <div>
-                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                    <label class="btn btn-secondary" for="option1">Unidad</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                    <label class="btn btn-secondary" for="option2">250g</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                    <label class="btn btn-secondary" for="option3">Libra</label>
-                </div>
-                <h5>Categoria</h5>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">3</label>
-                  </div>
-            </div>
-            <a href="#" class="btn btn-primary"> Agregar al carro </a>
-            <div class="card-quantity">
-                <button>+</button>
-                <span class="cardquantity">1</span>
-                <button>-</button>
-            </div>
-        </div>
-    </div>
 </div>
  
 
-<app-fil-product-boton></app-fil-product-boton>
+
 <app-carrito></app-carrito>
