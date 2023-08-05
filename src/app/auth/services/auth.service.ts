@@ -128,12 +128,13 @@ export class AuthService {
             localStorage.setItem( 'token', response.token! );
 
             // Extraer los valores del usuario NO es responsabilidad del registro de usuarios (Solo de validateToken())
-            // this._user = {
-            //   _id: response?.id!,
-            //   name: response?.name!,
-            //   email: response?.email!
-            // };
-
+            // En mi caso lo necesito para crear tienda 
+            this._user = {
+              _id: response?.id!,
+              name: response?.name!,
+              email: response?.email!,
+              role: response?.role!
+            };
           }
           else {
             localStorage.clear();
