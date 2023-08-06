@@ -25,12 +25,9 @@ export class FrutaService {
       .pipe(
         tap(response => {                                // tap: Se utiliza para realizar efectos secundarios para las notificaciones de la fuente observable
             console.log( "llamado frutas",response );
-            // Valida si la propiedad ok es verdadera
-            if( response.ok ) {
-
-            }       
+            // Valida si la propiedad ok es verdadera  
           }),
-        map(response => response.products ||[]),
+        map(response => response.product ||[]),
         catchError(err => {
           console.error(err);
           return of([] as Fruta[]);

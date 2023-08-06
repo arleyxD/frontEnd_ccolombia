@@ -1,43 +1,57 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FrutaService } from 'src/app/protected/services/fruta.service';
-import { FormBuilder } from '@angular/forms';
-import { Observable ,of} from 'rxjs';
 import { Fruta } from 'src/app/protected/interfaces/frutas.interface';
 
 @Component({
   selector: 'app-formulario-dinamico',
   templateUrl: './formulario-dinamico.component.html',
-  styleUrls: ['./formulario-dinamico.component.css']
+  styleUrls: ['./formulario-dinamico.component.css'],
 })
-export class FormularioDinamicoComponent implements OnInit{
-  forms: any[] = [];
+export class FormularioDinamicoComponent implements OnInit {
+  forms: FormGroup[] = [];
   frutas: Fruta[] = [];
-  selectedProduct: any = null;
 
-  constructor(private frutaService: FrutaService, private fb: FormBuilder) { }
+  // Agregar el formulario reactivo
+  form: FormGroup;
+
+  constructor(private frutaService: FrutaService, private fb: FormBuilder) {
+    // Inicializar el formulario reactivo
+    this.form = this.fb.group({
+      nombre: ['', Validators.required],
+      tipoProducto: ['', Validators.required],
+      tipo: ['bulto'],
+      inventarioCanastilla: [null, Validators.required],
+      inventarioBulto: [null, Validators.required],
+      valorMedioKilo: [null, Validators.required],
+      valorKilo: [null, Validators.required],
+      valorC: [null, Validators.required],
+      valorB: [null, Validators.required],
+      descripcion: ['', Validators.required],
+    });
+  }
 
   ngOnInit(): void {
-    this.frutaService.getFrutas().subscribe(
-      (frutas) => console.log(frutas),
-      (error) => console.error(error)
-    );
+    this.frutaService.getFrutas().subscribe((data) => {
+      this.frutas = data;
+      console.log(data);
+    });
   }
 
   // Método para agregar un nuevo formulario
   addForm() {
-    this.forms.push({
-      nombre: '',
-      tipoProducto: '',
-      tipo: 'bulto',
-      inventarioCanastilla: null,
-      inventarioBulto: null,
-      valorMedioKilo: null,
-      valorKilo: null,
-      valorC: null,
-      valorB: null,
-      descripcion: ''
-    });
+    this.forms.push(this.fb.group({
+      nombre: ['', Validators.required],
+      tipoProducto: ['', Validators.required],
+      tipo: ['bulto'],
+      inventarioCanastilla: [null, Validators.required],
+      inventarioBulto: [null, Validators.required],
+      valorMedioKilo: [null, Validators.required],
+      valorKilo: [null, Validators.required],
+      valorC: [null, Validators.required],
+      valorB: [null, Validators.required],
+      descripcion: ['', Validators.required],
+    }));
   }
 
   // Método para remover un formulario
@@ -54,22 +68,22 @@ export class FormularioDinamicoComponent implements OnInit{
     for (const form of this.forms) {
       // Crear objeto "producto"
       const producto: any = {
-        nombre: form.nombre,
-        tipoProducto: form.tipoProducto,
-        tipo: form.tipo,
-        valorMedioKilo: form.valorMedioKilo,
-        valorKilo: form.valorKilo,
-        valorC: form.valorC,
-        valorB: form.valorB,
-        descripcion: form.descripcion
+        nombre: form.value.nombre,
+        tipoProducto: form.value.tipoProducto,
+        tipo: form.value.tipo,
+        valorMedioKilo: form.value.valorMedioKilo,
+        valorKilo: form.value.valorKilo,
+        valorC: form.value.valorC,
+        valorB: form.value.valorB,
+        descripcion: form.value.descripcion,
       };
       productos.push(producto);
 
       // Crear objeto "inventario"
       const inventario: any = {
-        tipo: form.tipo,
-        inventarioCanastilla: form.inventarioCanastilla,
-        inventarioBulto: form.inventarioBulto
+        tipo: form.value.tipo,
+        inventarioCanastilla: form.value.inventarioCanastilla,
+        inventarioBulto: form.value.inventarioBulto,
       };
       inventarios.push(inventario);
     }
@@ -82,5 +96,39 @@ export class FormularioDinamicoComponent implements OnInit{
 
     // Ahora puedes enviar los datos al servidor o realizar cualquier acción necesaria con los arrays "productos" e "inventarios".
     // Por ejemplo, puedes enviarlos al servidor mediante una solicitud HTTP POST, si es necesario.
+  }
+
+  // Método para buscar frutas en función del valor del campo de búsqueda
+  onSearchProduct(form: FormGroup, value: string) {
+    const filterValue = value.toLowerCase();
+    if (filterValue && filterValue.trim() !== '') {
+      form.get('nombre')?.setValue(value); // Actualizar el campo "nombre" del formulario
+     // this.frutas = this.filterFrutas(filterValue);
+    } else {
+    //  this.frutas = [];
+    }
+  }
+
+  // Método para filtrar frutas en función del valor de búsqueda
+  filterFrutas(value: string): Fruta[] {
+    const filterValue = value.toLowerCase();
+    return this.frutas.filter((fruta) =>
+      fruta.nombre.toLowerCase().includes(filterValue)
+    );
+  }
+
+  // Método para seleccionar un producto en el buscador
+  onSelectProduct(form: FormGroup, value: string) {
+    const selectedFruta = this.frutas.find(
+      (fruta) => fruta.nombre.toLowerCase() === value.toLowerCase()
+    );
+    if (selectedFruta) {
+      form.patchValue({
+        nombre: selectedFruta.nombre,
+        tipoProducto: selectedFruta.tipo,
+        descripcion: selectedFruta.descripcion,
+      });
+    }
+    //this.frutas = []; // Limpiar la lista desplegable de frutas
   }
 }

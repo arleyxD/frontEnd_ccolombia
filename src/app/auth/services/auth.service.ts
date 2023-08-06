@@ -21,7 +21,6 @@ export class AuthService {
 
     /** Getters */
     get user() : User {
-      console.log( this._user );
       return { ...this._user };    // Evita la manipulacion de this._user
     }
 
