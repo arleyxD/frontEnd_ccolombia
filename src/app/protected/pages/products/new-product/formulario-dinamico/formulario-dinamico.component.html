@@ -15,6 +15,9 @@
      <datalist id="frutasList">
        <option *ngFor="let fruta of frutas" [value]="fruta.nombre">
      </datalist>
+
+     <!-- formulario _id-->
+    <input type="hidden" formControlName="id" />
      
     <!-- Resto del formulario -->
     <div class="col-md-6 form-group">
@@ -81,6 +84,7 @@
 
     <div class="col-md-12 form-group">
       <button type="button" (click)="removeForm(i)" class="btn btn-danger btn-borrar">Borrar formulario</button>
+      <button type="button" (click)="clearForm(form)" class="btn btn-secondary btn-limpiar" > Limpiar formulario </button>
     </div>
   </form>
 </div>
@@ -88,4 +92,5 @@
 <!-- Botón "Agregar" centrado -->
 <div class="col-md-12 btn-agregar mt-5 pt-3">
   <button type="button" (click)="addForm()" class="btn btn-primary">Agregar Producto</button>
+  <button type="button" (click)="guardarFormularios()" class="btn btn-success">Guardar Formularios</button>
 </div>

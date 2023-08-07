@@ -1,8 +1,8 @@
 import { Tienda } from "./tienda.interface";
 
-export interface tiendaResponse {
+export interface tiendaRes {
     ok: boolean;
     path?: string;
     msg?: string;
-    produt?: Tienda;
+    produt?: Array<Tienda>;
 }

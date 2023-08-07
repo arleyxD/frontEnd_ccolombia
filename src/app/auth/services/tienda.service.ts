@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable ,of} from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Tienda } from '../interfaces/tienda.interface';
 import { tiendaResponse } from '../interfaces/tiendaResponse.interface';
@@ -28,11 +29,19 @@ export class TiendaService {
   }
 
   // Función para obtener todas las tiendas
-  getTienda(id: string): Observable<tiendaResponse> {
+  getTienda(id: string): Observable<Tienda> {
     const url = `${this.apiUrl}/${id}`;
-    console.log("url get tienda",url);
+    console.log("url get tienda", url);
+    return this.http.get<Tienda>(url);
+  }
+
+  // Función para obtener todas las tiendas por medio del id User
+  getTiendaUser(id: string): Observable<tiendaResponse> {
+    const url = `${this.apiUrl}/user/${id}`;
+    console.log("url get tienda", url);
     return this.http.get<tiendaResponse>(url);
   }
+  
 
   // Función para obtener todas las tiendas
   getTiendas(): Observable<Tienda[]> {

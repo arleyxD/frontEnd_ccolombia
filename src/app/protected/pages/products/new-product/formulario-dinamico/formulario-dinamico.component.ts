@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FrutaService } from 'src/app/protected/services/fruta.service';
 import { Fruta } from 'src/app/protected/interfaces/frutas.interface';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-formulario-dinamico',
@@ -18,6 +19,7 @@ export class FormularioDinamicoComponent implements OnInit {
   constructor(private frutaService: FrutaService, private fb: FormBuilder) {
     // Inicializar el formulario reactivo
     this.form = this.fb.group({
+      id:[''],
       nombre: ['', Validators.required],
       tipoProducto: ['', Validators.required],
       tipo: ['bulto'],
@@ -41,6 +43,7 @@ export class FormularioDinamicoComponent implements OnInit {
   // Método para agregar un nuevo formulario
   addForm() {
     this.forms.push(this.fb.group({
+      id:[''],
       nombre: ['', Validators.required],
       tipoProducto: ['', Validators.required],
       tipo: ['bulto'],
@@ -58,6 +61,10 @@ export class FormularioDinamicoComponent implements OnInit {
   removeForm(index: number) {
     this.forms.splice(index, 1);
   }
+  // Método para limpiar un formulario individual
+  clearForm(form: FormGroup) {
+    form.reset();
+  }
 
   // Método para guardar los formularios en el servidor
   guardarFormularios() {
@@ -70,20 +77,21 @@ export class FormularioDinamicoComponent implements OnInit {
       const producto: any = {
         nombre: form.value.nombre,
         tipoProducto: form.value.tipoProducto,
-        tipo: form.value.tipo,
-        valorMedioKilo: form.value.valorMedioKilo,
-        valorKilo: form.value.valorKilo,
-        valorC: form.value.valorC,
-        valorB: form.value.valorB,
         descripcion: form.value.descripcion,
       };
       productos.push(producto);
 
       // Crear objeto "inventario"
       const inventario: any = {
+        
+        idFruta: form.value.id,
         tipo: form.value.tipo,
         inventarioCanastilla: form.value.inventarioCanastilla,
         inventarioBulto: form.value.inventarioBulto,
+        valorMedioKilo: form.value.valorMedioKilo,
+        valorKilo: form.value.valorKilo,
+        valorC: form.value.valorC,
+        valorB: form.value.valorB,
       };
       inventarios.push(inventario);
     }
@@ -124,6 +132,7 @@ export class FormularioDinamicoComponent implements OnInit {
     );
     if (selectedFruta) {
       form.patchValue({
+        id: selectedFruta._id,
         nombre: selectedFruta.nombre,
         tipoProducto: selectedFruta.tipo,
         descripcion: selectedFruta.descripcion,
