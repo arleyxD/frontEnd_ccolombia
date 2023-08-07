@@ -3,6 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FrutaService } from 'src/app/protected/services/fruta.service';
 import { Fruta } from 'src/app/protected/interfaces/frutas.interface';
 import { from } from 'rxjs';
+import { Tienda } from 'src/app/auth/interfaces/tienda.interface';
+import { TiendaService } from 'src/app/auth/services/tienda.service';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-formulario-dinamico',
@@ -12,11 +15,13 @@ import { from } from 'rxjs';
 export class FormularioDinamicoComponent implements OnInit {
   forms: FormGroup[] = [];
   frutas: Fruta[] = [];
+  tienda!: Tienda;
 
   // Agregar el formulario reactivo
   form: FormGroup;
 
-  constructor(private frutaService: FrutaService, private fb: FormBuilder) {
+  constructor(private frutaService: FrutaService,
+    private authService: AuthService, private tiendaService: TiendaService, private fb: FormBuilder) {
     // Inicializar el formulario reactivo
     this.form = this.fb.group({
       id:[''],
@@ -38,6 +43,20 @@ export class FormularioDinamicoComponent implements OnInit {
       this.frutas = data;
       console.log(data);
     });
+     let iduser = this.authService.user._id;
+    this.tiendaService.getTiendaUser(iduser).subscribe(
+      (response) => {
+        if (response.ok) {
+          this.tienda = response.produt!;
+          console.log(this.tienda)
+        } else {
+          console.error('Error al obtener las tiendas:', response.msg);
+        }
+      },
+      (error) => {
+        console.error('Error en la solicitud:', error);
+      }
+    );
   }
 
   // Método para agregar un nuevo formulario
@@ -83,7 +102,7 @@ export class FormularioDinamicoComponent implements OnInit {
 
       // Crear objeto "inventario"
       const inventario: any = {
-        
+        idTienda: this.tienda._id,
         idFruta: form.value.id,
         tipo: form.value.tipo,
         inventarioCanastilla: form.value.inventarioCanastilla,
