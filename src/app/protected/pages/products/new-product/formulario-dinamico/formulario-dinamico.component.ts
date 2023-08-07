@@ -6,6 +6,7 @@ import { from } from 'rxjs';
 import { Tienda } from 'src/app/auth/interfaces/tienda.interface';
 import { TiendaService } from 'src/app/auth/services/tienda.service';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { InventarioService } from 'src/app/protected/services/inventario.service';
 
 @Component({
   selector: 'app-formulario-dinamico',
@@ -21,7 +22,10 @@ export class FormularioDinamicoComponent implements OnInit {
   form: FormGroup;
 
   constructor(private frutaService: FrutaService,
-    private authService: AuthService, private tiendaService: TiendaService, private fb: FormBuilder) {
+    private authService: AuthService,
+    private tiendaService: TiendaService,
+    private inventarioService: InventarioService,
+    private fb: FormBuilder) {
     // Inicializar el formulario reactivo
     this.form = this.fb.group({
       id:[''],
@@ -40,6 +44,7 @@ export class FormularioDinamicoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.addForm();
     this.frutaService.getFrutas().subscribe((data) => {
       this.frutas = data;
       console.log(data);
@@ -104,8 +109,8 @@ export class FormularioDinamicoComponent implements OnInit {
 
       // Crear objeto "inventario"
       const inventario: any = {
-        idTienda: this.tienda._id,
-        idFruta: form.value.id,
+        id_tienda: this.tienda._id,
+        id_fruta: form.value.id,
         tipo: form.value.tipo,
         inventarioCanastilla: form.value.inventarioCanastilla,
         inventarioBulto: form.value.inventarioBulto,
@@ -123,8 +128,21 @@ export class FormularioDinamicoComponent implements OnInit {
     console.log('Productos:', productos);
     console.log('Inventarios:', inventarios);
 
-    // Ahora puedes enviar los datos al servidor o realizar cualquier acción necesaria con los arrays "productos" e "inventarios".
-    // Por ejemplo, puedes enviarlos al servidor mediante una solicitud HTTP POST, si es necesario.
+    this.inventarioService.enviarInventario(inventarios).subscribe(
+      (data) => {
+        console.log('Respuesta del servidor:', data);
+        // Puedes manejar la respuesta del servidor aquí, si es necesario.
+        this.forms.splice(1);
+        this.forms.forEach(element => {
+          element.reset();
+        });
+
+      },
+      (error) => {
+        console.error('Error al enviar los datos:', error);
+        // Puedes manejar errores aquí, si es necesario.
+      }
+    );
   }
 
   // Método para buscar frutas en función del valor del campo de búsqueda
