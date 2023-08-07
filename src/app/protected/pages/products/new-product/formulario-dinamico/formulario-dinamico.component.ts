@@ -27,6 +27,7 @@ export class FormularioDinamicoComponent implements OnInit {
       id:[''],
       nombre: ['', Validators.required],
       tipoProducto: ['', Validators.required],
+      variedad:['',Validators.required],
       tipo: ['bulto'],
       inventarioCanastilla: [null, Validators.required],
       inventarioBulto: [null, Validators.required],
@@ -65,6 +66,7 @@ export class FormularioDinamicoComponent implements OnInit {
       id:[''],
       nombre: ['', Validators.required],
       tipoProducto: ['', Validators.required],
+      variedad:['',Validators.required],
       tipo: ['bulto'],
       inventarioCanastilla: [null, Validators.required],
       inventarioBulto: [null, Validators.required],
@@ -154,6 +156,7 @@ export class FormularioDinamicoComponent implements OnInit {
         id: selectedFruta._id,
         nombre: selectedFruta.nombre,
         tipoProducto: selectedFruta.tipo,
+        variedad: selectedFruta.variedad,
         descripcion: selectedFruta.descripcion,
       });
     }
