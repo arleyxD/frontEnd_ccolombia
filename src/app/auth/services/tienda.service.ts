@@ -5,6 +5,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Tienda } from '../interfaces/tienda.interface';
 import { tiendaResponse } from '../interfaces/tiendaResponse.interface';
+import { tiendaRes } from '../interfaces/TiendaRes.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -44,8 +45,8 @@ export class TiendaService {
   
 
   // Función para obtener todas las tiendas
-  getTiendas(): Observable<Tienda[]> {
-    return this.http.get<Tienda[]>(this.apiUrl);
+  getTiendas(): Observable<tiendaRes> {
+    return this.http.get<tiendaRes>(this.apiUrl);
   }
 
   // Función para crear una nueva tienda
