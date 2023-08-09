@@ -1,50 +1,82 @@
-<pre>{{ products | json }}</pre>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Lista de Productos</h2>
 
-<h2>Lista de productos</h2>
+  <ng-container *ngIf="products && products.length > 0; then productList; else noProducts">
+  </ng-container>
 
-<ng-container *ngIf="products && products.length > 0; then productList; else noProducts">
-</ng-container>
+  <ng-template #productList>
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Inventario Canastilla</th>
+            <th>Inventario Bulto</th>
+            <th>Valor Medio Kilo</th>
+            <th>Valor Kilo</th>
+            <th>Valor Canastilla</th>
+            <th>Valor Bulto</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products;">
+            <td>{{ product.id_fruta.nombre }}</td>
+            <td>{{ product.tipo }}</td>
+            <td>{{ product.inventarioCanastilla }}</td>
+            <td>{{ product.inventarioBulto }}</td>
+            <td>{{ product.valorMedioKilo }}</td>
+            <td>{{ product.valorKilo }}</td>
+            <td>{{ product.valorC }}</td>
+            <td>{{ product.valorB }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editProduct(product)" title="Editar">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-danger" (click)="deleteProduct(product._id)" title="Eliminar">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>
 
-<ng-template #productList>
-  <h3>Productos registrados</h3>
-  <table class="table table-products">
-    <thead>
-      <th>Nombre</th>
-      <th>Categoria</th>
-      <th>Precio</th>
-      <th>Cantidad</th>
-      <th>Ranking</th>
-      <th colspan="2">Acciones</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of products">
-        <td>{{ product.name }}</td>
-        <td>{{ product.category }}</td>
-        <td>{{ product.price | currency }}</td>
-        <td>{{ product.quantity }}</td>
-        <td>{{ product.ranking }}</td>
-        <td>
-          <button
-            class="btn btn-primary"
-            (click)="update( product._id )"
-          >
-            Edit
-          </button>
-        </td>
-        <td>
-          <button
-            class="btn btn-primary"
-            (click)="delete( product._id )"
-          >
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <ng-template #noProducts>
+    <h3 class="text-center text-warning mt-4">No has registrado productos</h3>
+  </ng-template>
+  
+  </div>
 
-</ng-template>
-
-<ng-template #noProducts>
-  <h3>No has registdado productos</h3>
-</ng-template>
+    <!-- Modal para editar producto -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editProductModalLabel">Editar Producto</h5>
+            <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> 
+          </div>
+          <div class="modal-body">
+            <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm)">
+              <!-- Tus campos de formulario aquí -->
+              <!-- Ejemplo -->
+              <div class="form-group">
+                <label for="tipo">tipo:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
+                <label for="tipo">Inventario Canastilla:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
+                <label for="tipo">Inventario Bulto:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
+                <label for="tipo">Valor Medio Kilo:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
+                <label for="tipo">Valor Kilo:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
+                <label for="tipo">Valor Canastilla:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
+                <label for="tipo">Valor Bulto:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
+              </div>
+              <!-- ... otros campos ... -->
+              <button type="submit" class="btn btn-primary">Guardar Cambios</button>        
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -53,7 +53,7 @@ export class TiendaService {
     console.log(this.apiUrl)
     console.log(tienda)
     console.log(this.headers)
-    return this.http.post<tiendaResponse>(this.apiUrl, tienda, { headers: this.headers } );
+    return this.http.post<tiendaResponse>(this.apiUrl, tienda );
   }
 
   // Función para actualizar una tienda existente

@@ -7,6 +7,7 @@ import { Tienda } from 'src/app/auth/interfaces/tienda.interface';
 import { TiendaService } from 'src/app/auth/services/tienda.service';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { InventarioService } from 'src/app/protected/services/inventario.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formulario-dinamico',
@@ -127,22 +128,34 @@ export class FormularioDinamicoComponent implements OnInit {
     // Por ejemplo, si deseas mostrar los arrays por consola, puedes hacer lo siguiente:
     console.log('Productos:', productos);
     console.log('Inventarios:', inventarios);
+    Swal.fire({
+      title: 'Seguro que quieres guardar formulario?',
+      showCancelButton: true,
+      confirmButtonText: 'Guardar'
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        this.inventarioService.enviarInventario(inventarios).subscribe(
+          (data) => {
+            console.log('Respuesta del servidor:', data);
+            // Puedes manejar la respuesta del servidor aquí, si es necesario.
+            this.forms.splice(1);
+            this.forms.forEach(element => {
+              element.reset();
+            });
+    
+          },
+          (error) => {
+            console.error('Error al enviar los datos:', error);
+            Swal.fire('Error', "ErrorCreacionInventario", 'error');
+            // Puedes manejar errores aquí, si es necesario.
+          }
+        );
+        Swal.fire('Saved!', '', 'success')
+      } 
+    })
 
-    this.inventarioService.enviarInventario(inventarios).subscribe(
-      (data) => {
-        console.log('Respuesta del servidor:', data);
-        // Puedes manejar la respuesta del servidor aquí, si es necesario.
-        this.forms.splice(1);
-        this.forms.forEach(element => {
-          element.reset();
-        });
-
-      },
-      (error) => {
-        console.error('Error al enviar los datos:', error);
-        // Puedes manejar errores aquí, si es necesario.
-      }
-    );
+    
   }
 
   // Método para buscar frutas en función del valor del campo de búsqueda
