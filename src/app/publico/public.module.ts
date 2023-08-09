@@ -11,6 +11,7 @@ import { ContactanosComponent } from './pages/contactanos/contactanos.component'
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { CarritoComponent } from './shared/carrito/carrito.component';
 import { FilProductComponent } from './pages/fil-product/fil-product.component';
+import { FilProductBotonComponent } from './pages/fil-product/fil-product-boton/fil-product-boton.component';
 
 
 
@@ -23,7 +24,8 @@ import { FilProductComponent } from './pages/fil-product/fil-product.component';
     ContactanosComponent,
     PrincipalComponent,
     CarritoComponent,
-    FilProductComponent
+    FilProductComponent,
+    FilProductBotonComponent
   ],
   imports: [
     CommonModule,

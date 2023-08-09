@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'app-botones',
   templateUrl: './botones.component.html',

@@ -1,0 +1,41 @@
+
+    <div class="fixed-menu px-2 btn-group btn-custom">
+        <form class="d-flex search-form align-self-end" role="search">
+            <div class="search-container">
+            <input class="form-control search-input" type="search" [formControl]="myControl" placeholder="Buscar Tienda" aria-label="Buscar tienda">
+            <div *ngIf="myControl.value && filteredOptions.length" class="search-results">
+                <div *ngFor="let option of filteredOptions" class="search-result" (click)="onOptionClick(option)">
+                {{option}}
+                </div>
+            </div>
+            </div>
+        </form>
+        <button class="btn btn-primary btn-custom" (click)="onFiltroSeleccionado('descuentos')">
+        <i class="fas fa-percent icon"></i>
+        Descuentos
+        </button>
+        <button class="btn btn-primary btn-custom" (click)="onFiltroSeleccionado('frutas')">
+        <i class="fas fa-apple-alt icon"></i>
+        Frutas
+        </button>
+        <button class="btn btn-primary btn-custom" (click)="onFiltroSeleccionado('verduras')">
+        <i class="fas fa-carrot icon"></i>
+         Verduras
+        </button>
+        <button class="btn btn-primary btn-custom" (click)="onFiltroSeleccionado('hortizas')">
+        <i class="fas fa-seedling icon"></i>
+        Hortizas
+        </button>
+        <button class="btn btn-primary btn-custom" (click)="onFiltroSeleccionado('vegetales')">
+        <i class="fas fa-leaf icon"></i>
+        Vegetales
+        </button>
+        <button class="btn btn-primary btn-custom" (click)="onFiltroSeleccionado('promociones')">
+        <i class="fas fa-gift icon"></i>
+        Promociones
+        </button>
+        <button class="btn btn-primary btn-custom" (click)="onFiltroSeleccionado('otros')">
+        <i class="fas fa-cog icon"></i>
+        Otros
+        </button>
+    </div>
