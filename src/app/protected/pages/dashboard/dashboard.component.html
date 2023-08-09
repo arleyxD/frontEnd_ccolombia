@@ -1,7 +1,45 @@
-<h2>Dashboard</h2>
-<p>Solo se puede acceder si se está autenticado.</p>
+<div class="container mt-5  pt-5">
+    <div class="row">
+      <!-- Botones para mostrar/ocultar perfiles -->
+      <div class="col-lg-2 d-flex flex-column align-items-start">
+        <button class="btn btn-primary mb-2 custom-button" (click)="showUser = true; showTienda = false">Mostrar User</button>
+        <button class="btn btn-primary custom-button" (click)="showUser = false; showTienda = true">Mostrar Tienda</button>
+      </div>
+      <!-- Tarjetas de perfil -->
+      <div class="col-lg-10">
+        <div class="row justify-content-center">
+          <!-- Tarjeta de perfil del usuario -->
+          <div class="col-lg-6" *ngIf="showUser">
+            <div class="card">
+              <div class="card-header">
+                <h3>Perfil User</h3>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Name:</strong> {{user.name}}</li>
+                <li class="list-group-item"><strong>Email:</strong> {{user.email}}</li>
+                <li class="list-group-item"><strong>Role:</strong> {{user.role}}</li>
+                <!--...más campos si los hay...-->
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Tarjeta de perfil de la tienda -->
+          <div class="col-lg-6" *ngIf="showTienda">
+            <div class="card">
+              <div class="card-header">
+                <h3>Perfil Tienda</h3>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Name:</strong> {{tienda.nameTienda}}</li>
+                <li class="list-group-item"><strong>NIT:</strong> {{tienda.nit}}</li>
+                <!--...más campos si los hay...-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h3>User info</h3>
-<pre>{{ user | json }}</pre>
-
-
+  
+  
