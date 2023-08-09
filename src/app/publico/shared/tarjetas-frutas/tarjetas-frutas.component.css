@@ -1,0 +1,59 @@
+/* styles.css */
+
+/* styles.css */
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    max-width: 239px;
+    border-radius: 33px;
+    border: 1px solid #ccc;
+  }
+  
+  /* ... (Resto de los estilos) ... */
+  
+  
+  .product-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .product-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .checkbox-label {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .quantity-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  

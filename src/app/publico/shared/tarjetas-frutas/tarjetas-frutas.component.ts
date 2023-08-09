@@ -1,12 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { inventario } from 'src/app/protected/interfaces/inventario.interface';
+import { InventarioService } from 'src/app/protected/services/inventario.service';
 
 @Component({
   selector: 'app-tarjetas-frutas',
   templateUrl: './tarjetas-frutas.component.html',
   styleUrls: ['./tarjetas-frutas.component.css']
 })
-export class TarjetasFrutasComponent {
+export class TarjetasFrutasComponent implements OnInit {
   @Input() filtroActual: string = '';
+  inventarios: inventario[]=[];
+
+
+  constructor(private inventarioService: InventarioService ){}
   
   productos: any[] = [
     // Aquí puedes definir los productos de frutas y sus detalles según tu necesidad.
@@ -23,5 +29,13 @@ export class TarjetasFrutasComponent {
     } else {
       return this.productos.filter(producto => producto.categoria === this.filtroActual);
     }
+  }
+
+
+  ngOnInit(): void {
+    this.inventarioService.getInventario().subscribe(data =>{
+      this.inventarios= data;
+      console.log(this.inventarios)
+    });
   }
 }

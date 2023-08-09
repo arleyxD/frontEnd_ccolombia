@@ -30,6 +30,17 @@ export class InventarioService {
       console.log(this.headers)
       return this.http.post(`${ this.BASE_URL }/inventario`, inventarios, { headers: this.headers });
     }
+    getInventario() {
+      return this.http.get<inventario[]>(
+        `${ this.BASE_URL }/inventario`,   // URL del BackEnd al que debemos hacer la peticion
+        { headers: this.headers }                         // Cabeceras con información requerida
+      )
+      .pipe(
+        tap( response => {
+          console.log( response );
+        })
+      );
+    }
 
     getInventarioByTienda( userId: string ) {
       return this.http.get<inventario[]>(

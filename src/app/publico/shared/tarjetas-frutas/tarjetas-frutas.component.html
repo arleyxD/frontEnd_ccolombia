@@ -1,15 +1,54 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-4" *ngFor="let producto of filtrarProductos()">
       <div class="card mb-4 box-shadow">
         <div class="card-body">
           <h5 class="card-title">{{ producto.nombre }}</h5>
-          <!-- Aquí puedes mostrar otros detalles del producto si lo deseas -->
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-md-6" *ngFor="let inventario of inventarios">
+      <div class="product-card card mb-4 box-shadow">
+        <div class="row g-2">
+          <div class="col-md-4">
+            <img src="../../../../assets/contenidos/brocoli.jpg" class="product-image img-fluid rounded-start" alt="Broccoli">
+          </div>
+          <div class="col-md-6 mx-5 ">
+            <div class="card-body">
+              <h6 class="product-title">{{ inventario.id_fruta.nombre }}</h6>
+              <p class="product-text">{{ inventario.id_fruta.descripcion }}</p>
+              <p class="product-text text-danger">Producto Agotado - No disponible en inventario</p>
+              <p class="product-price">Precio: $ {{ inventario.valorKilo }}</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label checkbox-label" for="inlineCheckbox1">500g</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label checkbox-label" for="inlineCheckbox2">Kilo</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                <label class="form-check-label checkbox-label" for="inlineCheckbox3">Canastilla</label>
+              </div>
+              <button class="btn btn-primary mt-2 quantity-btn">Agregar al carro</button>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <button class="btn btn-outline-secondary btn-sm quantity-btn">-</button>
+                <span class="cardquantity mx-3">1</span>
+                <button class="btn btn-outline-secondary btn-sm quantity-btn">+</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
   <div class="row">
     <div class="col-12 text-center mt-4">
       <a routerLink="filproductos" class="btn btn-lg btn-outline-secondary">Ver más Productos</a>
     </div>
   </div>
+  
