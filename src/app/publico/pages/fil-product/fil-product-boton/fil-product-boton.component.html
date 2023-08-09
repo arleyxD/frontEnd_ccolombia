@@ -1,8 +1,8 @@
 
-    <div class=" px-2 btn-group btn-custom">
+    <div class="fixed-menu px-2 btn-group btn-custom">
         <form class="d-flex search-form align-self-end" role="search">
             <div class="search-container">
-            <input class="form-control search-input" type="search" [formControl]="myControl" placeholder="Buscar Producto" aria-label="Buscar tienda">
+            <input class="form-control search-input" type="search" [formControl]="myControl" placeholder="Buscar Tienda" aria-label="Buscar tienda">
             <div *ngIf="myControl.value && filteredOptions.length" class="search-results">
                 <div *ngFor="let option of filteredOptions" class="search-result" (click)="onOptionClick(option)">
                 {{option}}
