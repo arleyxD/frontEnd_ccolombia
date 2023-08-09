@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable ,of} from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Tienda } from '../interfaces/tienda.interface';
 import { tiendaResponse } from '../interfaces/tiendaResponse.interface';
+import { tiendaRes } from '../interfaces/TiendaRes.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -28,15 +30,23 @@ export class TiendaService {
   }
 
   // Función para obtener todas las tiendas
-  getTienda(id: string): Observable<tiendaResponse> {
+  getTienda(id: string): Observable<Tienda> {
     const url = `${this.apiUrl}/${id}`;
-    console.log("url get tienda",url);
-    return this.http.get<tiendaResponse>(url);
+    console.log("url get tienda", url);
+    return this.http.get<Tienda>(url);
   }
 
+  // Función para obtener todas las tiendas por medio del id User
+  getTiendaUser(id: string): Observable<tiendaResponse> {
+    const url = `${this.apiUrl}/user/${id}`;
+    console.log("url get tienda", url);
+    return this.http.get<tiendaResponse>(url);
+  }
+  
+
   // Función para obtener todas las tiendas
-  getTiendas(): Observable<Tienda[]> {
-    return this.http.get<Tienda[]>(this.apiUrl);
+  getTiendas(): Observable<tiendaRes> {
+    return this.http.get<tiendaRes>(this.apiUrl);
   }
 
   // Función para crear una nueva tienda
@@ -44,7 +54,7 @@ export class TiendaService {
     console.log(this.apiUrl)
     console.log(tienda)
     console.log(this.headers)
-    return this.http.post<tiendaResponse>(this.apiUrl, tienda, { headers: this.headers } );
+    return this.http.post<tiendaResponse>(this.apiUrl, tienda );
   }
 
   // Función para actualizar una tienda existente

@@ -10,6 +10,7 @@ import { NewProductComponent } from './pages/products/new-product/new-product.co
 import { UpdateProductComponent } from './pages/products/update-product/update-product.component';
 import { FormularioDinamicoComponent } from './pages/products/new-product/formulario-dinamico/formulario-dinamico.component';
 import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsMod
     CommonModule,
     ProtectedRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
     
   ]
 })

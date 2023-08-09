@@ -1,84 +1,101 @@
 <!-- formulario-dinamico.component.html -->
 <div class="container mt-5 pt-5">
   <div *ngFor="let form of forms; let i = index" class="mb-4">
-    <form #formRef="ngForm" class="row">
-      <!-- Campos del formulario -->
+    <form [formGroup]="form" class="row">
+       <!-- Buscador de productos -->
+       <input
+       type="text"
+       class="form-control"
+       placeholder="Buscar producto"
+       #searchInput
+       (input)="onSearchProduct(form,searchInput.value)"
+       list="frutasList"
+       (change)="onSelectProduct(form,searchInput.value)"
+     />
+     <datalist id="frutasList">
+       <option *ngFor="let fruta of frutas" [value]="fruta.nombre">
+     </datalist>
 
-      <div class="col-md-6 form-group">
-        <label for="nombre{{ i }}">Nombre:</label>
-        <input type="text" name="nombre{{ i }}" [(ngModel)]="form.nombre" required class="form-control">
+     <!-- formulario _id-->
+    <input type="hidden" formControlName="id" />
+     
+    <!-- Resto del formulario -->
+    <div class="col-md-6 form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" formControlName="nombre" class="form-control" required  readonly="readonly">
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label for="tipoProducto">Tipo producto:</label>
+      <input type="text" formControlName="tipoProducto" class="form-control" required readonly="readonly">
+    </div>
+
+    <div class="col-md-3 form-group">
+      <label for="variedad">variedad:</label>
+      <input type="text" formControlName="variedad" class="form-control" required readonly="readonly">
+    </div>
+
+    <div class="col-md-3 form-group">
+      <label for="tipo">Presentacion:</label>
+      <div class="form-check">
+        <input type="radio" name="tipo" formControlName="tipo" value="bulto" class="form-check-input">
+        <label class="form-check-label" for="tipo">Bulto</label>
       </div>
-
-      <div class="col-md-6 form-group">
-        <label for="tipoProducto{{ i }}">Tipo producto:</label>
-        <input type="text" name="tipoProducto{{ i }}" [(ngModel)]="form.tipoProducto" required class="form-control">
+      <div class="form-check">
+        <input type="radio" name="tipo" formControlName="tipo" value="canastilla" class="form-check-input">
+        <label class="form-check-label" for="tipo">Canastilla</label>
       </div>
+    </div>
 
-      <div class="col-md-6 form-group">
-        <label for="tipo{{ i }}">Presentacion:</label>
-        <div class="form-check">
-          <input type="radio" name="tipo{{ i }}" [(ngModel)]="form.tipo" value="bulto" class="form-check-input">
-          <label class="form-check-label" for="tipo{{ i }}">Bulto</label>
-        </div>
-        <div class="form-check">
-          <input type="radio" name="tipo{{ i }}" [(ngModel)]="form.tipo" value="canastilla" class="form-check-input">
-          <label class="form-check-label" for="tipo{{ i }}">Canastilla</label>
-        </div>
-      </div>
+    <!-- Mostrar campos específicos según el tipo seleccionado -->
+    <div class="col-md-6 form-group" *ngIf="form.get('tipo')?.value === 'canastilla'">
+      <label for="inventarioCanastilla">Inventario Canastillas:</label>
+      <input type="number" name="inventarioCanastilla" formControlName="inventarioCanastilla" class="form-control" required>
+    </div>
+    
+    <div class="col-md-6 form-group" *ngIf="form.get('tipo')?.value === 'bulto'">
+      <label for="inventarioBulto">Inventario Bultos:</label>
+      <input type="number" name="inventarioBulto" formControlName="inventarioBulto" class="form-control" required>
+    </div>
 
-      <!-- Mostrar campos específicos según el tipo seleccionado -->
-      <div class="col-md-6 form-group" *ngIf="form.tipo === 'canastilla'">
-        <label for="inventarioCanastilla{{ i }}">Inventario Canastillas:</label>
-        <input type="number" name="inventarioCanastilla{{ i }}" [(ngModel)]="form.inventarioCanastilla" required class="form-control">
-      </div>
+    <!-- Nuevos campos -->
+    <div class="col-md-6 form-group">
+      <label for="valorMedioKilo">Valor Medio Kilo:</label>
+      <input type="number" name="valorMedioKilo" formControlName="valorMedioKilo" class="form-control" required>
+    </div>
 
-      <div class="col-md-6 form-group" *ngIf="form.tipo === 'bulto'">
-        <label for="inventarioBulto{{ i }}">Inventario Bultos:</label>
-        <input type="number" name="inventarioBulto{{ i }}" [(ngModel)]="form.inventarioBulto" required class="form-control">
-      </div>
+    <div class="col-md-6 form-group">
+      <label for="valorKilo">Valor Kilo:</label>
+      <input type="number" name="valorKilo" formControlName="valorKilo" class="form-control" required>
+    </div>
 
-      <!-- Nuevos campos -->
-      <div class="col-md-6 form-group">
-        <label for="valorMedioKilo{{ i }}">Valor Medio Kilo:</label>
-        <input type="number" name="valorMedioKilo{{ i }}" [(ngModel)]="form.valorMedioKilo" required class="form-control">
-      </div>
+    <div class="col-md-6 form-group" *ngIf="form.get('tipo')?.value === 'canastilla'">
+      <label for="valorC">Valor Canastilla:</label>
+      <input type="number" name="valorC" formControlName="valorC" class="form-control" required>
+    </div>
 
-      <div class="col-md-6 form-group">
-        <label for="valorKilo{{ i }}">Valor Kilo:</label>
-        <input type="number" name="valorKilo{{ i }}" [(ngModel)]="form.valorKilo" required class="form-control">
-      </div>
+    <div class="col-md-6 form-group" *ngIf="form.get('tipo')?.value === 'bulto'">
+      <label for="valorB">Valor Bulto:</label>
+      <input type="number" name="valorB" formControlName="valorB" class="form-control" required>
+    </div>
+    <!-- Fin de nuevos campos -->
 
-      <div class="col-md-6 form-group" *ngIf="form.tipo === 'canastilla'">
-        <label for="valorC{{ i }}">Valor Canastilla:</label>
-        <input type="number" name="valorC{{ i }}" [(ngModel)]="form.valorC" required class="form-control">
-      </div>
+    <div class="col-md-12 form-group">
+      <label for="descripcion">Descripción:</label>
+      <textarea  formControlName="descripcion" class="form-control" required readonly="readonly"></textarea>
+    </div>
 
-      <div class="col-md-6 form-group" *ngIf="form.tipo === 'bulto'">
-        <label for="valorB{{ i }}">Valor Bulto:</label>
-        <input type="number" name="valorB{{ i }}" [(ngModel)]="form.valorB" required class="form-control">
-      </div>
-      <!-- Fin de nuevos campos -->
+    <!-- Otros campos del formulario si los hay -->
 
-      <div class="col-md-12 form-group">
-        <label for="descripcion{{ i }}">Descripción:</label>
-        <textarea name="descripcion{{ i }}" [(ngModel)]="form.descripcion" required class="form-control"></textarea>
-      </div>
+    <div class="col-md-12 form-group">
+      <button type="button" (click)="removeForm(i)" class="btn btn-danger btn-borrar">Borrar formulario</button>
+      <button type="button" (click)="clearForm(form)" class="btn btn-secondary btn-limpiar" > Limpiar formulario </button>
+    </div>
+  </form>
+</div>
 
-
-      <!-- Otros campos del formulario si los hay -->
-
-      <div class="col-md-12 form-group">
-        <button type="button" (click)="removeForm(i)" class="btn btn-danger btn-borrar">Borrar formulario</button>
-      </div>
-    </form>
-  </div>
-
-  <!-- Botón "Agregar" centrado -->
-  <div class="col-md-12 btn-agregar mt-5 pt-3">
-    <button type="button" (click)="addForm()" class="btn btn-primary">Agregar Producto</button>
-  </div>
-   <!-- Botón "Guardar" -->
-   <div class="col-md-12 mt-4">
-    <button type="button" (click)="guardarFormularios()" class="btn btn-success">Guardar Formularios</button>
-  </div>
+<!-- Botón "Agregar" centrado -->
+<div class="col-md-12 btn-agregar mt-5 pt-3">
+  <button type="button" (click)="addForm()" class="btn btn-primary">Agregar Producto</button>
+  <button type="button" (click)="guardarFormularios()" class="btn btn-success">Guardar Formularios</button>
 </div>

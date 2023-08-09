@@ -4,6 +4,6 @@ export interface FrutaResponse {
     ok: boolean;
     path?: string;
     msg?: string;
-    products?: Array<Fruta>;
+    product?: Array<Fruta>;
   }
   

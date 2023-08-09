@@ -6,7 +6,7 @@
         <button class="btn btn-primary custom-button" (click)="showUser = false; showTienda = true">Mostrar Tienda</button>
       </div>
       <!-- Tarjetas de perfil -->
-      <div class="col-lg-10">
+      <div class="col-lg-10 py-3">
         <div class="row justify-content-center">
           <!-- Tarjeta de perfil del usuario -->
           <div class="col-lg-6" *ngIf="showUser">
@@ -24,16 +24,21 @@
           </div>
   
           <!-- Tarjeta de perfil de la tienda -->
-          <div class="col-lg-6" *ngIf="showTienda">
+          <div class="col-lg-6 py-3" *ngIf="showTienda">
             <div class="card">
               <div class="card-header">
                 <h3>Perfil Tienda</h3>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Name:</strong> {{tienda.nameTienda}}</li>
-                <li class="list-group-item"><strong>NIT:</strong> {{tienda.nit}}</li>
-                <!--...más campos si los hay...-->
-              </ul>
+                  <li class="list-group-item"><strong>Nombre Tienda:</strong> {{tiendas.nameTienda}}</li>
+                  <li class="list-group-item"><strong>Nit:</strong> {{tiendas.nit}}</li>
+                  <li class="list-group-item"><strong>local:</strong> {{tiendas.local}}</li>
+                  <li class="list-group-item"><strong>Direccion:</strong> {{tiendas.location}}</li>
+                  <li class="list-group-item"><strong>Abrir Tienda:</strong> {{tiendas.scheduleStart}}</li>
+                  <li class="list-group-item"><strong>Cierre Tienda:</strong> {{tiendas.scheduleEnd}}</li>
+                  <li class="list-group-item"><strong>Numero :</strong> {{tiendas.contact}}</li>
+                  <!--...más campos si los hay...-->
+              </ul>                                       
             </div>
           </div>
         </div>

@@ -1,53 +1,18 @@
 <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-md-4 col-sm-6 col-12  mt-3 mb-3">
-        <div class="card">
-          <div class="image">
-            <img src="../../../../assets/contenidos/tiendaF.jpg" alt="Imagen de la página 1">
-          </div>
-          <div class="details">
-            <h5 class="title">Titulo de la página 1</h5>
-            <p class="description">Esta es una breve descripción de lo que la página 1 ofrece.</p>
-            <a routerLink="filproductos" class="btn btn-sm btn-outline-secondary">Visitar Página</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 mb-3 ">
-        <div class="card">
-          <div class="image">
-            <img src="../../../../assets/contenidos/tiendaF.jpg" alt="Imagen de la página 2">
-          </div>
-          <div class="details">
-            <h5 class="title">Titulo de la página 2</h5>
-            <p class="description">Esta es una breve descripción de lo que la página 2 ofrece.</p>
-            <a routerLink="filproductos" class="btn btn-sm btn-outline-secondary">Visitar Página</a>
+      <div *ngFor="let tarjeta of tiendas" class="col-lg-3 col-md-4 col-sm-6 col-12  mt-3 mb-3">
+          <div class="card">
+            <div class="image">
+              <img src="../../../../assets/contenidos/tiendaF.jpg" alt="Imagen de la página 1">
+            </div>
+            <div class="details">
+              <h5 class="title">{{ tarjeta.nameTienda }}</h5>
+              <p class="local">{{ tarjeta.local }}</p>
+              <p class="contact">{{ tarjeta.contact }}</p>
+              <a routerLink="filproductos/{{ tarjeta._id }}" class="btn btn-sm btn-outline-secondary">Visitar Página</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 mb-3 ">
-        <div class="card">
-          <div class="image">
-            <img src="../../../../assets/contenidos/tiendaF.jpg" alt="Imagen de la página 3">
-          </div>
-          <div class="details">
-            <h5 class="title">Titulo de la página 3</h5>
-            <p class="description">Esta es una breve descripción de lo que la página 3 ofrece.</p>
-            <a routerLink="filproductos" class="btn btn-sm btn-outline-secondary">Visitar Página</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3 mb-3 ">
-        <div class="card">
-          <div class="image">
-            <img src="../../../../assets/contenidos/tiendaF.jpg" alt="Imagen de la página 3">
-          </div>
-          <div class="details">
-            <h5 class="title">Titulo de la página 3</h5>
-            <p class="description">Esta es una breve descripción de lo que la página 3 ofrece.</p>
-            <a routerLink="filproductos" class="btn btn-sm btn-outline-secondary">Visitar Página</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
   

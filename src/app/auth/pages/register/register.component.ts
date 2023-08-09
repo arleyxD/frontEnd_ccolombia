@@ -93,9 +93,9 @@ export class RegisterComponent {
   console.log("nueva empresa", nuevaTienda );
   this.tiendaService.crearTienda(nuevaTienda).subscribe(
     (respuesta) => {      
-      console.log('Tienda creada:', respuesta.produt?._id);
-      const IdEmpresa = respuesta.produt?._id;
-      localStorage.setItem( 'IdEmpresa', IdEmpresa ? IdEmpresa:'');
+      console.log('Tienda creada:', respuesta);
+     // const IdEmpresa = respuesta.produt;
+      //localStorage.setItem( 'IdEmpresa', IdEmpresa ? IdEmpresa:'');
       this.router.navigateByUrl('/dashboard');
     },
     (error) => {
