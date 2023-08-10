@@ -9,16 +9,16 @@
   </div> -->
 
   <div class="row">
-    <div class="col-md-6" *ngFor="let inventario of inventarios">
+    <div class="col-md-6" *ngFor="let inventario of filtrarInventario()">
       <div class="product-card card mb-4 box-shadow">
         <div class="row g-2">
           <div class="col-md-4">
-            <img src="../../../../assets/contenidos/brocoli.jpg" class="product-image img-fluid rounded-start" alt="Broccoli">
+            <img src="../../../../assets/contenidos/{{inventario.id_fruta._id}}.jpg" class="product-image img-fluid rounded-start" alt="{{ inventario.id_fruta.nombre }}">
           </div>
           <div class="col-md-6 mx-5 ">
             <div class="card-body">
               <h6 class="product-title">{{ inventario.id_fruta.nombre }}</h6>
-              <p class="product-text">{{ inventario.id_fruta.descripcion }}</p>
+              <p class="product-text-descripcion">{{ inventario.id_fruta.descripcion }}</p>
               <p class="product-text text-danger">Producto Agotado - No disponible en inventario</p>
               <p class="product-price">Precio: $ {{ inventario.valorKilo }}</p>
               <div class="form-check form-check-inline">
@@ -34,11 +34,7 @@
                 <label class="form-check-label checkbox-label" for="inlineCheckbox3">Canastilla</label>
               </div>
               <button class="btn btn-primary mt-2 quantity-btn">Agregar al carro</button>
-              <div class="d-flex justify-content-between align-items-center mt-3">
-                <button class="btn btn-outline-secondary btn-sm quantity-btn">-</button>
-                <span class="cardquantity mx-3">1</span>
-                <button class="btn btn-outline-secondary btn-sm quantity-btn">+</button>
-              </div>
+              <a routerLink="filproductos/{{inventario.id_tienda._id}}" class="btn">Ver Tienda</a>
             </div>
           </div>
         </div>

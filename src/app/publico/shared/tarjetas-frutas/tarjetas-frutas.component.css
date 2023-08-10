@@ -11,7 +11,7 @@
   }
   
   .product-image {
-    max-width: 239px;
+    max-width: 15rem;
     border-radius: 33px;
     border: 1px solid #ccc;
   }
@@ -30,6 +30,13 @@
     margin-bottom: 10px;
     color: #666;
   }
+
+  .product-text-descripcion {
+    width: 300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
   
   .product-price {
     font-size: 18px;

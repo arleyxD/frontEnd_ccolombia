@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/services/auth.service';
-import { ProductsService } from 'src/app/protected/services/products.service';
-import { Product } from '../../interfaces/product.interface';
-import { Router } from '@angular/router';
 import { TiendaService } from 'src/app/auth/services/tienda.service';
 import { Tienda } from 'src/app/auth/interfaces/tienda.interface';
-import { inventario } from '../../interfaces/inventario.interface';
+import { inventario } from '../../interfaces/inventario.interfaceFT';
 import { InventarioService } from '../../services/inventario.service';
 import { Fruta } from '../../interfaces/frutas.interface';
 

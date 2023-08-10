@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { inventario } from 'src/app/protected/interfaces/inventario.interface';
+import { inventario } from 'src/app/protected/interfaces/inventario.interfaceFT';
 import { InventarioService } from 'src/app/protected/services/inventario.service';
 
 @Component({
@@ -28,6 +28,16 @@ export class TarjetasFrutasComponent implements OnInit {
       return this.productos;
     } else {
       return this.productos.filter(producto => producto.categoria === this.filtroActual);
+    }
+  }
+
+
+  filtrarInventario(): inventario[]{
+    console.log("Fruta",this.filtroActual)
+    if (!this.filtroActual || this.filtroActual === 'Todos') {
+      return this.inventarios;
+    } else {
+      return this.inventarios.filter(producto => producto.id_fruta.tipo === this.filtroActual);
     }
   }
 

@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { inventario } from '../interfaces/inventario.interface';
+import { inventario } from '../interfaces/inventario.interfaceFT';
+import { inventarioS } from '../interfaces/inventario.interface';
 import { Observable, map, tap } from 'rxjs';
 
 @Injectable({
@@ -24,7 +25,7 @@ export class InventarioService {
       // console.log( this.token );
     }
   
-    enviarInventario(inventarios: inventario[]) {
+    enviarInventario(inventarios: inventarioS[]) {
       console.log('${ this.BASE_URL }/inventario');
       console.log(inventarios);
       console.log(this.headers)
