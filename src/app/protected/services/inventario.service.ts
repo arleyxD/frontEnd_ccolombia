@@ -28,6 +28,7 @@ export class InventarioService {
     enviarInventario(inventarios: inventarioS[]) {
       console.log('${ this.BASE_URL }/inventario');
       console.log(inventarios);
+      console.log(this.token)
       console.log(this.headers)
       return this.http.post(`${ this.BASE_URL }/inventario`, inventarios, { headers: this.headers });
     }

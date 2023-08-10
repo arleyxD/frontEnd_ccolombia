@@ -23,6 +23,10 @@ const routes: Routes = [
         component: FilProductComponent
       },
       {
+        path: 'main/filproductos/:id',
+        component: FilProductComponent
+      },
+      {
         path: '**',
         redirectTo: 'main'
       }
