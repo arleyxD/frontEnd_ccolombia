@@ -40,6 +40,7 @@ export class FilProductComponent {
   filtrarInventario(): inventario[]{
     if(this.idTienda){
       console.log(true);
+      this.inventarioActual = this.inventarios.filter(product => product.id_tienda._id === this.idTienda);
       return this.inventarios.filter(product => product.id_tienda._id === this.idTienda);
     }else{
       console.log(false);
