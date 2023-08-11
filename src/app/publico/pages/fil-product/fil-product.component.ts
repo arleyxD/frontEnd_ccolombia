@@ -1,5 +1,7 @@
 import { Component} from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { inventario } from 'src/app/protected/interfaces/inventario.interfaceFT';
+import { InventarioService } from 'src/app/protected/services/inventario.service';
 
 @Component({
   selector: 'app-fil-product',
@@ -8,16 +10,42 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class FilProductComponent {
 
+  inventarios: inventario[] = []; 
+  inventarioActual: inventario[] = [];
+  idTienda: string = '';
 
-  constructor(private route: ActivatedRoute) { }
+
+  constructor(private route: ActivatedRoute, private servicioInventario: InventarioService) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
-      const id = params['id'];
+      this.idTienda = params['id'];
       // Ahora puedes utilizar el valor de 'id' como desees en tu componente
-      console.log('ID:', id);
+      console.log('ID:', this.idTienda);
       // Por ejemplo, podrías hacer una llamada a una API para obtener los detalles basados en este 'id'
     });
+    this.llamadoServicioInventario();
+    
+
+  }
+
+  llamadoServicioInventario(){
+    this.servicioInventario.getInventario().subscribe(data => {
+    this.inventarios = data;
+    console.log(this.inventarios);
+    console.log(this.filtrarInventario());
+    });
+  }
+
+  filtrarInventario(): inventario[]{
+    if(this.idTienda){
+      console.log(true);
+      return this.inventarios.filter(product => product.id_tienda._id === this.idTienda);
+    }else{
+      console.log(false);
+      return this.inventarios;
+    }
+    
   }
   
 
