@@ -2,8 +2,11 @@
   <div class="d-flex justify-content-center mb-3">
     <h2>{{inventarioActual[0].id_tienda.nameTienda}}</h2>
   </div>
+  <div class="col-md-12 justify-content-center ">
+    <img src="../../../../assets/contenidos/istockphoto-1411625540-612x612-removebg-preview.png" class="card-img" alt="">
+  </div>
   <div class="d-flex justify-content-center mb-3">
-    <app-fil-product-boton></app-fil-product-boton>
+    <!-- <app-fil-product-boton></app-fil-product-boton> -->
   </div>
   <div class="position-relative d-flex justify-content-end" *ngFor="let inventario of filtrarInventario()">
     <div class="card custom-card">
