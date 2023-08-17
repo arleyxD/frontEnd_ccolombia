@@ -1,4 +1,32 @@
 .custom-card {
-      top: 50%;
+      
       left: 5%;
-    }
+}
+.content{
+  position: fixed;  
+  padding-top: 20px;
+  z-index: 2;
+  left: 10px;
+  right: 10px;
+  font-style: italic;
+  color: #255000;
+
+}
+.fixed-image{
+  position: fixed;
+  right: 0px;
+  z-index: 1;
+    
+  bottom: 500px;
+}
+.h2.title {
+  background: chocolate;
+  color: white;
+  padding: .5rem 1.4rem;
+  border-radius: .3rem;
+  border: 4px dotted;
+}
+.tarjetaFrutas{
+  margin-top: 7rem;
+}
+
