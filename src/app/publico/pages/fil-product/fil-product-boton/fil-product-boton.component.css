@@ -30,6 +30,6 @@
     width: 200px;
     height: 100%;
     padding: 15px;
-    
+    z-index: 2;
   }
   

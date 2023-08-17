@@ -1,14 +1,16 @@
+
 <div class="container mt-5">
-  <div class="d-flex justify-content-center mb-3">
+  <div class="content d-flex justify-content-center mb-3 font-style">
     <h2>{{inventarioActual[0].id_tienda.nameTienda}}</h2>
   </div>
   <div class="col-md-12 justify-content-center ">
-    <img src="../../../../assets/contenidos/istockphoto-1411625540-612x612-removebg-preview.png" class="card-img" alt="">
+    <img src="../../../../assets/contenidos/istockphoto-1411625540-612x612-removebg-preview.png" class="fixed-image card-img" alt="">
+    
   </div>
   <div class="d-flex justify-content-center mb-3">
     <!-- <app-fil-product-boton></app-fil-product-boton> -->
   </div>
-  <div class="position-relative d-flex justify-content-end" *ngFor="let inventario of filtrarInventario()">
+  <div class="position-relative d-flex justify-content-end tarjetaFrutas " *ngFor="let inventario of filtrarInventario()">
     <div class="card custom-card">
       <div class="row no-gutters">
         <div class="col-md-4">
@@ -31,6 +33,9 @@
               </label>
               <label class="btn btn-secondary">
                 <input type="radio" name="options" id="option3" autocomplete="off"> Canastilla
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option4" autocomplete="off"> Bulto
               </label>
             </div>
             <div class="form-check mt-3">
