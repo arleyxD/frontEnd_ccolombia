@@ -1,0 +1,27 @@
+
+    @keyframes moverDerecha {
+        0% {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .card {
+        animation: moverDerecha 1s forwards;
+    }
+
+    .col-xl-3:nth-child(2) .card {
+        animation-delay: 0.25s;
+    }
+
+    .col-xl-3:nth-child(3) .card {
+        animation-delay: 0.5s;
+    }
+
+    .col-xl-3:nth-child(4) .card {
+        animation-delay: 0.75s;
+    }

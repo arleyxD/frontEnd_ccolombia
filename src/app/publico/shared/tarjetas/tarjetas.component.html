@@ -3,7 +3,7 @@
       <div *ngFor="let tarjeta of tiendas" class="col-lg-3 col-md-4 col-sm-6 col-12  mt-3 mb-3">
           <div class="card">
             <div class="image">
-              <img src="../../../../assets/contenidos/tiendaF.jpg" alt="Imagen de la página 1">
+              <img [src]="updateRandomImage()" alt="Imagen de la página 1">
             </div>
             <div class="details">
               <h5 class="title">{{ tarjeta.nameTienda }}</h5>
