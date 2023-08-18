@@ -11,6 +11,7 @@ import { UpdateProductComponent } from './pages/products/update-product/update-p
 import { FormularioDinamicoComponent } from './pages/products/new-product/formulario-dinamico/formulario-dinamico.component';
 import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule
 import { HttpClientModule } from '@angular/common/http';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsComponent,
     NewProductComponent,
     UpdateProductComponent,
-    FormularioDinamicoComponent
+    FormularioDinamicoComponent,
+    PedidosComponent
   ],
   imports: [
     CommonModule,
