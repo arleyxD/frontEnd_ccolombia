@@ -65,13 +65,15 @@
               <!-- Tus campos de formulario aquí -->
               <!-- Ejemplo -->
               <div class="form-group">
-                <label for="tipo">tipo:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
-                <label for="tipo">Inventario Canastilla:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
-                <label for="tipo">Inventario Bulto:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
-                <label for="tipo">Valor Medio Kilo:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
-                <label for="tipo">Valor Kilo:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
-                <label for="tipo">Valor Canastilla:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
-                <label for="tipo">Valor Bulto:</label><input type="text" class="form-control" id="tipo" [(ngModel)]="selectedProduct" name="tipo" required>
+                <div *ngIf="selectedProduct">
+                <label for="tipo">tipo:</label><input type="text" class="form-control" id="tipo"  value="{{selectedProduct.tipo}}" name="tipo" required>
+                <label for="inventarioCanastilla">Inventario Canastilla:</label><input type="text" class="form-control" id="inventarioCanastilla" value="{{selectedProduct.inventarioCanastilla}}" name="inventarioCanastilla" required>
+                <label for="inventarioBulto">Inventario Bulto:</label><input type="text" class="form-control" id="inventarioBulto" value="{{selectedProduct.inventarioBulto}}" name="inventarioBulto" required>
+                <label for="valorMedioKilo">Valor Medio Kilo:</label><input type="text" class="form-control" id="valorMedioKilo" value="{{selectedProduct.valorMedioKilo}}" name="valorMedioKilo" required>
+                <label for="valorKilo">Valor Kilo:</label><input type="text" class="form-control" id="valorKilo" value="{{selectedProduct.valorKilo}}" name="valorKilo" required>
+                <label for="valorC">Valor Canastilla:</label><input type="text" class="form-control" id="valorC" value="{{selectedProduct.valorC}}" name="valorC" required>
+                <label for="valorB">Valor Bulto:</label><input type="text" class="form-control" id="valorB" value="{{selectedProduct.valorB}}" name="valorB" required>
+                </div>
               </div>
               <!-- ... otros campos ... -->
               <button type="submit" class="btn btn-primary">Guardar Cambios</button>        

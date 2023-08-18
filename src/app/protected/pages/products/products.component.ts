@@ -7,7 +7,7 @@ import { InventarioService } from '../../services/inventario.service';
 import { Fruta } from '../../interfaces/frutas.interface';
 
 import Swal from 'sweetalert2';
-import { NgForm } from '@angular/forms';
+import { NgForm, ɵValue } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -88,7 +88,7 @@ export class ProductsComponent implements OnInit {
   // Método para abrir el modal y establecer el producto seleccionado
   editProduct(product: inventario): void {
     this.selectedProduct = { ...product };
-    
+    console.log("producto a modiifcar",this.selectedProduct);
     // Abrir el modal usando JavaScript puro
     let modal = document.getElementById('editProductModal') as HTMLElement;
     modal.style.display = 'block';
@@ -103,6 +103,17 @@ export class ProductsComponent implements OnInit {
   // Método para enviar el formulario
   onSubmit(form: NgForm): void {
     if (form.valid) {
+      console.log(this.selectedProduct)
+      if(this.selectedProduct.tipo === 'bulto'){
+        this.selectedProduct.inventarioBulto  = Number((document.getElementById('inventarioBulto') as HTMLInputElement).value);
+        this.selectedProduct.valorB = Number((document.getElementById('valorB') as HTMLInputElement).value);
+      }else{
+        this.selectedProduct.inventarioCanastilla = Number((document.getElementById('inventarioCanastilla') as HTMLInputElement).value);
+        this.selectedProduct.valorC = Number((document.getElementById('valorC') as HTMLInputElement).value);
+      }
+      this.selectedProduct.valorMedioKilo = Number((document.getElementById('valorMedioKilo') as HTMLInputElement).value);
+      this.selectedProduct.valorKilo = Number((document.getElementById('valorKilo') as HTMLInputElement).value);
+      console.log(this.selectedProduct)
       this.inventarioService.editInventario(this.selectedProduct).subscribe(() => {
         this.loadInventario();
   
